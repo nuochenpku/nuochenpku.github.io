@@ -1,7 +1,7 @@
 ---
 title: "个人简介"
 permalink: /chinese/
-author_profile: true
+author_profile: false
 ---
 <!-- **李健 男 博士研究生 中国科学院信息工程研究所**  
 **电子邮箱：me@lijian.ac.cn**
