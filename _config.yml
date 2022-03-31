@@ -7,11 +7,11 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jian Li"
+title                    : "Nuo Chen"
 title_separator          : "-"
-name                     : &name "Jian Li"
-description              : &description "PhD student in Machine Learning. Institute of Information Engineering, CAS"
-url                      : https://superlj666.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Nuo Chen"
+description              : &description "In-coming PhD of HKUST."
+url                      : https://nuochenpku.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "superlj666/superlj666.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -77,13 +77,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jian Li"
+  name             : "Nuo Chen"
   avatar           : "avatar.png" # "jianli.jpg" #
-  bio              : "PhD student in Machine Learning. Institute of Information Engineering, CAS"
-  location         : "Beijing, China"
+  bio              : "In-coming PhD of HKUST."
+  location         : "Beijing&Hong-Kong, China"
   employer         : 
-  googlescholar    : "https://scholar.google.com/citations?hl=en&user=IAJpTqYAAAAJ"
-  email            : "me@lijian.ac.cn"
+  googlescholar    : "https://scholar.google.com/citations?user=qFS5KY0AAAAJ&hl=zh-CN"
+  email            : "nuochen@pku.edu.cn"
   uri              : 
   bitbucket        :
   codepen          :
