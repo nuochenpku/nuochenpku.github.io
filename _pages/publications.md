@@ -3,59 +3,38 @@ title: "Publications ([Google Scholar Profile](https://scholar.google.com/citati
 permalink: /publications/
 author_profile: true
 ---
-## 2020
-* <b>Automated Spectral Kernel Learning</b>. <br>
-<b>Jian Li</b>, Yong Liu, Weiping Wang. <i>In Proceedings of the 34th AAAI Conference on Artificial Intelligence (**AAAI 2020**)</i>.<br>
-[[PDF]](https://lijian.ac.cn/files/2020_AAAI_ASKL/2020_AAAI_ASKL.pdf)
-[[Poster]](https://lijian.ac.cn/files/2020_AAAI_ASKL/2020_AAAI_AKSL_poster.pdf)
-[[Code]](https://github.com/superlj666/Automated-Spectral-Kernel-Learning)
-* <b>Convolutional Spectral Kernel Learning</b>. Preprint.<br>
-<b>Jian Li</b>, Yong Liu, Weiping Wang. <i>arXiv preprint arXiv:2002.12744 , 2020</i>.<br>
-[[PDF]](https://arxiv.org/pdf/2002.12744)
+##  2022
+(*=equal contribution)
+*  <b>From Good to Best: Two-Stage Training for Cross-Lingual Machine Reading Comprehension</b> [[PDF](https://arxiv.org/abs/2112.04735)] [[Poster](https://aaai-2022.virtualchair.net/poster_aaai1835)]<br>
+**Nuo Chen**, Linjun Shou, Ming Gog, Jian Pei, Daxin Jiang.<br>
+AAAI Conference on Artificial Intelligence (**AAAI 2022**).
+## 2021
+*  <b>Self-supervised Contrastive Learning for End-to-end Spoken Question Answering</b> [[PDF](https://arxiv.org/abs/2109.03381)] <br>
+Chenyu You\*, **Nuo Chen**\*, Yuexian Zou.<br>
+Conference on Empirical Methods in Natural Language Processing (**EMNLP 2021**(findings)).
+*  <b>Text Anchor Based Metric Learning for Small-footprint Keyword Spotting</b> <br>
+Li Wang, Rongzhi Gu, **Nuo Chen**, Yuexian Zou.<br>
+Conference of the International Speech Communication Association (**INTERSPEECH 2021**).
+*  <b>Contextualized Attention-based Knowledge Transfer for Spoken Conversational Question Answering</b> [[PDF](https://web.pkusz.edu.cn/adsp/files/2021/10/you21c_interspeech.pdf)]<br>
+Chenyu You\*, **Nuo Chen**\*, Yuexian Zou.<br>
+Conference of the International Speech Communication Association (**INTERSPEECH 2021**).
+*  <b>Self-supervised Dialogue Learning for Spoken Conversational Question Answering</b> [[PDF](https://web.pkusz.edu.cn/adsp/files/2021/10/chen21_interspeech1.pdf)] <br>
+ **Nuo Chen**, Chenyu You,Yuexian Zou.<br>
+Conference of the International Speech Communication Association (**INTERSPEECH 2021**).
+* <b>Multi-Modal Residual Knowledge Distillation for Spoken Question Answering</b> ([[PDF](https://web.pkusz.edu.cn/adsp/files/2021/08/IJCAI2021%E9%99%88%E8%AF%BA.pdf)]) <br>
+Chenyu You\*, **Nuo Chen**\*, Yuexian Zou.<br>
+International Joint Conference on Artificial Intelligence (**IJCAI 2021**)
+* <b>Knowledge Distillation for improved accuracy in Spoken Question Answering</b> [[PDF](https://web.pkusz.edu.cn/adsp/files/2021/10/%E9%99%88%E8%AF%BA-Knowledge_Distillation_for_Improved_Accuracy_in_Spoken_Question_Answering.pdf)] <br>
+Chenyu You\*, **Nuo Chen**\*, Yuexian Zou.<br>
+International Conference on Acoustics, Speech and Signal Processing(**ICASSP 2021**)
+* <b>Adaptive Bi-directional Attention: Exploring Multi-Granularity Representations for Machine Reading Comprehension</b> [[PDF](https://web.pkusz.edu.cn/adsp/files/2021/10/%E9%99%88%E8%AF%BA-Adaptive_Bi-Directional_Attention_Exploring_Multi-Granularity_Representations_for_Machine_Reading_Comprehension.pdf)] <br>
+ **Nuo Chen**, Fenglin Liu, Peilin Zhou, Yuexian Zou.<br>
+International Conference on Acoustics, Speech and Signal Processing(**ICASSP 2021**)
 
+## Preprint
+* Automatic Prosody Annotation with Pre-Trained Text-Speech Model [[Code](https://github.com/Daisyqk/Automatic-Prosody-Annotation)][[Demo](https://daisyqk.github.io/Automatic-Prosody-Annotation_w/)].2022
+* Bridge the gap between language models and multilingual sequence labeling.2022
+* Predicting COVID-19 Spread via Deep Graph Diffusion Infomax.2022
+* A Transformer-based Threshold-Free Framework for Multi-Intent NLU.2022
+* End-to-end Spoken Conversational Question Answering: Task, Dataset and Model.2020 [[PDF](https://arxiv.org/pdf/2010.08923)]
 
-## 2019
-* <b>Multi-Class Learning using Unlabeled Samples: Theory and Algorithm</b>. <br>
-<b>Jian Li</b>, Yong Liu, Rong Yin, Weiping Wang. <i>In Proceedings of the 28th International Joint Conference on Artificial Intelligence (**IJCAI 2019**)</i>.<br>
-[[PDF]](https://www.ijcai.org/proceedings/2019/0399.pdf)
-[[Poster]](https://lijian.ac.cn/files/2019_IJCAI_MC/2019_MC_LRC_SSL_poster.pdf)
-[[Slides]](https://lijian.ac.cn/files/2019_IJCAI_MC/2019_MC_LRC_SSL_slides.pdf)
-[[Code]](https://github.com/superlj666/Multi-Class-Learning-using-Unlabeled-Samples-Theory-and-Algorithm)
-* <b>Approximate Manifold Regularization: Scalable Algorithm and Generalization Analysis</b>. <br>
-<b>Jian Li</b>, Yong Liu, Rong Yin, Weiping Wang. <i>In Proceedings of the 28th International Joint Conference on Artificial Intelligence (**IJCAI 2019**)</i>.<br>
-[[PDF]](https://www.ijcai.org/proceedings/2019/0400.pdf)
-[[Poster]](https://lijian.ac.cn/files/2019_IJCAI_LapRLS/2019_LapRLS_Nystrom_PCG_poster.pdf)
-[[Slides]](https://lijian.ac.cn/files/2019_IJCAI_LapRLS/2019_LapRLS_Nystrom_PCG_slides.pdf)
-[[Code]](https://github.com/superlj666/Approximate-Manifold-Regularization-Scalable-Algorithm-and-Generalization-Analysis)
-* <b>Learning Vector-valued Functions with Local Rademacher Complexity</b>. Preprint. <br>
-<b>Jian Li</b>, Yong Liu, Weiping Wang. <i>arXiv preprint arXiv:1909.04883, 2019</i>. <br>
-[[PDF]](https://arxiv.org/pdf/1909.04883)
-[[Code]](https://github.com/superlj666/Learning-Vector-valued-Functions-with-Local-Rademacher-Complexity)
-* <b>Distributed Learning with Random Features</b>. Preprint. <br>
-<b>Jian Li</b>, Yong Liu, Weiping Wang. <i>arXiv preprint arXiv:1906.03155, 2019</i>. <br>
-[[PDF]](https://arxiv.org/pdf/1906.03155)
-[[Code]](https://github.com/superlj666/Distributed-Learning-with-Random-Features)
-* <b>Efficient Cross-Validation for Semi-Supervised Learning</b>. Preprint. <br>
-Yong Liu, <b>Jian Li</b>, Guangjun Wu, Lizhong Ding, Weiping Wang. <i>arXiv preprint arXiv:1902.04768, 2019</i>. <br>
-[[PDF]](https://arxiv.org/pdf/1902.04768)
-
-## 2018
-* <b>Multi-Class Learning: From Theory to Algorithm</b>. <br>
-<b>Jian Li</b>, Yong Liu, Rong Yin, Hua Zhang, Lizhong Ding, Weiping Wang. <i>Advances in Neural Information Processing Systems 31 (**NeurIPS 2018**)</i>. <br>
-[[PDF]](https://lijian.ac.cn/files/2018_NeurIPS_MC/2018_mc_lr.pdf)
-[[Poster]](https://lijian.ac.cn/files/2018_NeurIPS_MC/mc-lrc-nips-poster.pdf)
-[[Sildes]](https://lijian.ac.cn/files/2018_NeurIPS_MC/mc-lrc-nips-slides.pdf)
-[[3-minute video]](https://youtu.be/mE_RpgWuKK8)
-[[Code]](https://github.com/superlj666/Multi-Class-Learning-From-Theory-to-Algorithm)
-* <b>Max-Diversity Distributed Learning: Theory and Algorithms</b>. Preprint. <br>
-Yong Liu, <b>Jian Li</b>, Weiping Wang. <i>arXiv preprint arXiv:1812.07738, 2018</i>. <br>
-[[PDF]](https://lijian.ac.cn/files/2018_max_diversity_dc.pdf)
-[[Code]](https://arxiv.org/pdf/1812.07738)
-
-
-## 2017
-* <b>Efficient Kernel Selection via Spectral Analysis</b>. <br>
-<b>Jian Li</b>, Yong Liu, Hailun Lin, Yinliang Yue, Weiping Wang. <i>In Proceedings of the 26th International Joint Conference on Artificial Intelligence (**IJCAI 2017**) </i>. <br>
-[[PDF]](https://lijian.ac.cn/files/2017_IJCAI_KS/2017_kernel_selection.pdf)
-[[Poster]](https://lijian.ac.cn/files/2017_IJCAI_KS/ijicai-poster-0816.pdf)
-[[Sildes]](https://lijian.ac.cn/files/2017_IJCAI_KS/IJCAI_presentation.pptx)
