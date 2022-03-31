@@ -3,7 +3,7 @@ title: "个人简介"
 permalink: /chinese/
 author_profile: true
 ---
-**李健 男 博士研究生 中国科学院信息工程研究所**  
+<!-- **李健 男 博士研究生 中国科学院信息工程研究所**  
 **电子邮箱：me@lijian.ac.cn**
 
 # 研究方向
@@ -24,4 +24,4 @@ author_profile: true
 <b>Jian Li</b>, Yong Liu, Rong Yin, Hua Zhang, Lizhong Ding, Weiping Wang. <i>Advances in Neural Information Processing Systems 31 (NIPS 2018)</i>.
 
 <b>[Efficient kernel selection via spectral analysis](https://superlj666.github.io/publications/sm)</b> <br>
-<b>Jian Li</b>, Yong Liu, Hailun Lin, Yinliang Yue, Weiping Wang. <i>In Proceedings of the 26th International Joint Conference on Artificial Intelligence (IJCAI 2017) </i>.
+<b>Jian Li</b>, Yong Liu, Hailun Lin, Yinliang Yue, Weiping Wang. <i>In Proceedings of the 26th International Joint Conference on Artificial Intelligence (IJCAI 2017) </i>. -->
