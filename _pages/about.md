@@ -8,7 +8,7 @@ redirect_from:
   - /about.htm
 ---
 I am now in my second year of master's degree in computer science at Peking University, advised by [Yuexian Zou](https://web.pkusz.edu.cn/adsp/). I got my bachelor's degree from Beijing University of Posts and Telecommunications. 
- I was employed by Alibaba Damo Academy as a research intern, advised by [Fei Huang](https://scholar.google.com/citations?user=9r98PpoAAAAJ&hl=zh-CN).  I aslo work closely with Microsoft research and  Tencent AI Lab.
+ I was employed  as a research intern by Alibaba Damo Academy, Microsoft research and  Tencent AI Lab.
 
 # Research
  My research interests focus on nlp, including question answering, cross-lingual understanding, dialog generation and multi-modal fusion.  <br>
@@ -49,6 +49,7 @@ International Conference on Acoustics, Speech and Signal Processing(**ICASSP 202
 * End-to-end Spoken Conversational Question Answering: Task, Dataset and Model.2020 [[PDF](https://arxiv.org/pdf/2010.08923)]
 
 # Honors and Awards
+* AAAI-2022 Scholarship
 * KDD Cup 2020 Challenges for Modern E-Commerce Platform: Debiasing Top 4%
 * Peking University Tiehan Scholarship
 * Merit student of Peking University
