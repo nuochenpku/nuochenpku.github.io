@@ -17,7 +17,7 @@ Indeed, my works now are focusing on **generalization** and **cross-lingual lang
 # Publications 
 (*=equal contribution)
 *  From Good to Best: Two-Stage Training for Cross-Lingual Machine Reading Comprehension [[PDF](https://arxiv.org/abs/2112.04735)] [[Poster](https://aaai-2022.virtualchair.net/poster_aaai1835)]<br>
-**Nuo Chen**, Linjun Shou, Ming Gog, Jian Pei, Daxin Jiang.<br>
+**Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Daxin Jiang.<br>
 AAAI Conference on Artificial Intelligence (**AAAI 2022**).
 *  Self-supervised Contrastive Learning for End-to-end Spoken Question Answering [[PDF](https://arxiv.org/abs/2109.03381)] <br>
 Chenyu You\*, **Nuo Chen**\*, Yuexian Zou.<br>
