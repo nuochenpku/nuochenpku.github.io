@@ -14,6 +14,7 @@ Conference of the North American Chapter of the Association for Computational Li
 *  <b>From Good to Best: Two-Stage Training for Cross-Lingual Machine Reading Comprehension</b> [[PDF](https://arxiv.org/abs/2112.04735)] [[Poster](https://aaai-2022.virtualchair.net/poster_aaai1835)]<br>
 **Nuo Chen**, Linjun Shou, Ming Gog, Jian Pei, Daxin Jiang.<br>
 AAAI Conference on Artificial Intelligence (**AAAI 2022**).
+
 ## 2021
 *  <b>Self-supervised Contrastive Learning for End-to-end Spoken Question Answering</b> [[PDF](https://arxiv.org/abs/2109.03381)] <br>
 Chenyu You\*, **Nuo Chen**\*, Yuexian Zou.<br>
@@ -39,8 +40,7 @@ International Conference on Acoustics, Speech and Signal Processing(**ICASSP 202
 
 ## Preprint
 * Automatic Prosody Annotation with Pre-Trained Text-Speech Model [[Code](https://github.com/Daisyqk/Automatic-Prosody-Annotation)][[Demo](https://daisyqk.github.io/Automatic-Prosody-Annotation_w/)].2022
-* Bridge the gap between language models and multilingual sequence labeling.2022
 * Predicting COVID-19 Spread via Deep Graph Diffusion Infomax.2022
 * A Transformer-based Threshold-Free Framework for Multi-Intent NLU.2022
-* End-to-end Spoken Conversational Question Answering: Task, Dataset and Model.2020 [[PDF](https://arxiv.org/pdf/2010.08923)]
+
 
