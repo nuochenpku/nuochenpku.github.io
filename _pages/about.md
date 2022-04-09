@@ -16,6 +16,12 @@ Indeed, my works now are focusing on **generalization** and **cross-lingual lang
 
 # Publications 
 (*=equal contribution)
+*  Bridging the gap between language models and multilingual sequence labeling [[PDF]] <br>
+**Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Daxin Jiang.<br>
+Conference of the North American Chapter of the Association for Computational Linguistics (**NAACL 2022**).
+*  End-to-end Spoken Conversational Question Answering:  Task, Dataset and Model [[PDF]] <br>
+Chenyu You\*, **Nuo Chen**\*, Fenglin Liu, Xian Wu, shen Ge, Yuexian Zou.<br>
+Conference of the North American Chapter of the Association for Computational Linguistics (**NAACL 2022**(findings)).
 *  From Good to Best: Two-Stage Training for Cross-Lingual Machine Reading Comprehension [[PDF](https://arxiv.org/abs/2112.04735)] [[Poster](https://aaai-2022.virtualchair.net/poster_aaai1835)]<br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Daxin Jiang.<br>
 AAAI Conference on Artificial Intelligence (**AAAI 2022**).
