@@ -16,7 +16,7 @@ Indeed, my works now are focusing on **generalization** and **cross-lingual lang
 
 # Publications 
 (*=equal contribution)
-*  Bridging the gap between language models and multilingual sequence labeling [[PDF]] <br>
+*  Bridging the gap between language models and multilingual sequence labeling [[PDF](https://arxiv.org/pdf/2010.08923)] <br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Daxin Jiang.<br>
 Conference of the North American Chapter of the Association for Computational Linguistics (**NAACL 2022**).
 *  End-to-end Spoken Conversational Question Answering:  Task, Dataset and Model [[PDF]] <br>
@@ -49,10 +49,9 @@ International Conference on Acoustics, Speech and Signal Processing(**ICASSP 202
 
 # Preprint
 * Automatic Prosody Annotation with Pre-Trained Text-Speech Model [[Code](https://github.com/Daisyqk/Automatic-Prosody-Annotation)][[Demo](https://daisyqk.github.io/Automatic-Prosody-Annotation_w/)].2022
-* Bridge the gap between language models and multilingual sequence labeling.2022
 * Predicting COVID-19 Spread via Deep Graph Diffusion Infomax.2022
 * A Transformer-based Threshold-Free Framework for Multi-Intent NLU.2022
-* End-to-end Spoken Conversational Question Answering: Task, Dataset and Model.2020 [[PDF](https://arxiv.org/pdf/2010.08923)]
+
 
 # Honors and Awards
 * AAAI-2022 Scholarship
