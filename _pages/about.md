@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.htm
 ---
-I am now in my second year of master's degree in computer science at Peking University, advised by [Yuexian Zou](https://web.pkusz.edu.cn/adsp/). I got my bachelor's degree from Beijing University of Posts and Telecommunications. 
+I am now in my third year of master's degree in computer science at Peking University, advised by [Yuexian Zou](https://web.pkusz.edu.cn/adsp/). I got my bachelor's degree from Beijing University of Posts and Telecommunications. 
  I was employed  as a research intern by Alibaba Damo Academy, Microsoft research and  Tencent AI Lab.
 
 # Research
