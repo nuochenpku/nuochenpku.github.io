@@ -16,7 +16,7 @@ Indeed, my works now are focusing on **generalization** and **cross-lingual lang
 
 # Publications 
 (*=equal contribution)
-*  Bridging the gap between language models and multilingual sequence labeling [[PDF]] <br>
+*  Bridging the gap between language models and multilingual sequence labeling [[PDF](https://arxiv.org/abs/2204.05210)] <br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Daxin Jiang.<br>
 Conference of the North American Chapter of the Association for Computational Linguistics (**NAACL 2022**).
 *  End-to-end Spoken Conversational Question Answering:  Task, Dataset and Model [[PDF](https://arxiv.org/pdf/2010.08923)] <br>
