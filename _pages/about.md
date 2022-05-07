@@ -9,6 +9,7 @@ redirect_from:
 ---
 I am now in my third year of master's degree in computer science at Peking University, advised by [Yuexian Zou](https://web.pkusz.edu.cn/adsp/). I got my bachelor's degree from Beijing University of Posts and Telecommunications. 
  I was employed  as a research intern by Alibaba Damo Academy, Microsoft research and  Tencent AI Lab.
+ I am in-coming Phd of HKUST, supervised by [Jia li](https://sites.google.com/view/lijia).
 
 # Research
  My research interests focus on nlp, including question answering, cross-lingual understanding, dialog generation and multi-modal fusion.  <br>
@@ -16,7 +17,7 @@ Indeed, my works now are focusing on **generalization** and **cross-lingual lang
 
 # Publications 
 (*=equal contribution)
-*  Bridging the gap between language models and multilingual sequence labeling [[PDF](https://arxiv.org/abs/2204.05210)] <br>
+*  Bridging the gap between language models and multilingual sequence labeling [[PDF](https://arxiv.org/abs/2204.05210)][[Code](https://github.com/nuochenpku/Multilingual-SL)] <br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Daxin Jiang.<br>
 Conference of the North American Chapter of the Association for Computational Linguistics (**NAACL 2022**).
 *  End-to-end Spoken Conversational Question Answering:  Task, Dataset and Model [[PDF](https://arxiv.org/pdf/2010.08923)] <br>
@@ -58,6 +59,9 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 * KDD Cup 2020 Challenges for Modern E-Commerce Platform: Debiasing Top 4%
 * Peking University Tiehan Scholarship
 * Merit student of Peking University
+
+# Activity and Service
+* Interviewer for ACMMM, ACL, EMNLP and AAAI.
 
 # Contact
 * Email: nuochen[at]pku.edu.cn
