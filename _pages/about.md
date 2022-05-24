@@ -15,6 +15,12 @@ I am now in my third year of master's degree in computer science at Peking Unive
  My research interests focus on nlp, including question answering, cross-lingual understanding, dialog generation and multi-modal fusion.  <br>
 Indeed, my works now are focusing on **generalization** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
 
+# News
+* **Excellent Graduation Thesis of Peking University**
+* **Outstanding Graduates of Peking University**
+* **Outstanding Graduates of Beijing**
+* 2022-5-1，got **100 citations** in Google Scholar!
+
 # Publications 
 (*=equal contribution)
 *  Bridging the gap between language models and multilingual sequence labeling （**Oral**） [[PDF](https://arxiv.org/abs/2204.05210)][[Code](https://github.com/nuochenpku/Multilingual-SL)] <br>
@@ -55,6 +61,9 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 
 
 # Honors and Awards
+* Excellent Graduation Thesis of Peking University
+* Outstanding Graduates of Peking University
+* Outstanding Graduates of Beijing
 * AAAI-2022 Scholarship
 * KDD Cup 2020 Challenges for Modern E-Commerce Platform: Debiasing Top 4%
 * Peking University Tiehan Scholarship
