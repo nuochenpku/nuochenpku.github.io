@@ -23,6 +23,9 @@ Indeed, my works now are focusing on **generalization** and **cross-lingual lang
 
 # Publications 
 (*=equal contribution)
+* Automatic Prosody Annotation with Pre-Trained Text-Speech Model [[Code](https://github.com/Daisyqk/Automatic-Prosody-Annotation)][[Demo](https://daisyqk.github.io/Automatic-Prosody-Annotation_w/)]<br>
+Ziqian Dai, Jianwei Yu, Yan Wang, **Nuo Chen**, Yanyao Bian, Guangzhi Li, Deng Cai, Dong Yu <br>
+Conference of the International Speech Communication Association (**INTERSPEECH 2022**).
 *  Bridging the gap between language models and multilingual sequence labeling （**Oral**） [[PDF](https://arxiv.org/abs/2204.05210)][[Code](https://github.com/nuochenpku/Multilingual-SL)] <br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Daxin Jiang.<br>
 Conference of the North American Chapter of the Association for Computational Linguistics (**NAACL 2022**).
@@ -55,7 +58,6 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 International Conference on Acoustics, Speech and Signal Processing (**ICASSP 2021**)
 
 # Preprint
-* Automatic Prosody Annotation with Pre-Trained Text-Speech Model [[Code](https://github.com/Daisyqk/Automatic-Prosody-Annotation)][[Demo](https://daisyqk.github.io/Automatic-Prosody-Annotation_w/)].2022
 * Predicting COVID-19 Spread via Deep Graph Diffusion Infomax.2022
 * A Transformer-based Threshold-Free Framework for Multi-Intent NLU.2022
 
