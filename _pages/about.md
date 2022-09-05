@@ -23,7 +23,7 @@ Indeed, my works now are focusing on **generalization** and **cross-lingual lang
 
 # Publications 
 (*=equal contribution)
-*  A Transformer-based Threshold-Free Framework for Multi-Intent NLU （**Oral**） <br>
+*  A Transformer-based Threshold-Free Framework for Multi-Intent NLU （Oral） <br>
 Lisong Chen, **Nuo Chen**, Yuexian Zou.<br>
 INTERNATIONAL CONFERENCE ON COMPUTATIONAL LINGUISTICS (**COLING 2022**).
 *  Automatic Prosody Annotation with Pre-Trained Text-Speech Model [[Code](https://github.com/Daisyqk/Automatic-Prosody-Annotation)][[Demo](https://daisyqk.github.io/Automatic-Prosody-Annotation_w/)]<br>
