@@ -7,9 +7,9 @@ redirect_from:
   - /about/
   - /about.htm
 ---
-I am now in my third year of master's degree in computer science at Peking University, advised by [Yuexian Zou](https://web.pkusz.edu.cn/adsp/). I got my bachelor's degree from Beijing University of Posts and Telecommunications. 
- I was employed  as a research intern by Alibaba Damo Academy, Microsoft research and  Tencent AI Lab.
- I am in-coming Phd of HKUST, supervised by [Jia li](https://sites.google.com/view/lijia).
+I am now in my first year of Phd. in datas science and analysis (DSA) at HKUST, advised by [Jia li](https://sites.google.com/view/lijia).
+I got my master's degree from Peking University, majored in computer science, supervised by [Yuexian Zou](https://web.pkusz.edu.cn/adsp/), and got my bachelor's degree from Beijing University of Posts and Telecommunications. I was employed  as a research intern by Alibaba Damo Academy, Microsoft research and  Tencent AI Lab, worked closely with [Daxin Jiang](https://scholar.google.com/citations?user=N-wAHCoAAAAJ&hl=zh-CN), [Linjun Shou](https://www.microsoft.com/en-us/research/people/lisho/) and [Yan Wang](https://libertywing.github.io/yanwang.github.io/).
+ 
 
 # Research
  My research interests focus on nlp, including question answering, cross-lingual understanding, dialog generation and multi-modal fusion.  <br>
