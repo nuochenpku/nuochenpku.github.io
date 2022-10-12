@@ -16,6 +16,7 @@ I got my master's degree from Peking University, majored in computer science, su
 Indeed, my works now are focusing on **generalization** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
 
 # News
+* **Invited Talk** at Shanghai University Of Engineering Science
 * **Excellent Graduation Thesis of Peking University**
 * **Outstanding Graduates of Peking University**
 * **Outstanding Graduates of Beijing**
@@ -77,6 +78,7 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 * Merit student of Peking University
 
 # Activity and Service
+* Invited Talk at Shanghai University Of Engineering Science
 * Interviewer for ACMMM, ACL, EMNLP and AAAI.
 
 # Contact
