@@ -62,10 +62,7 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 International Conference on Acoustics, Speech and Signal Processing (**ICASSP 2021**)
 
 # Preprint
-* Predicting COVID-19 Spread via Deep Graph Diffusion Infomax.2022
 * What would Harry say? Building Dialogue Agents for Characters in a Story.2022
-* Alleviating Over-smoothing for Unsupervised Sentence Representation.2022
-* CATBERT: Learning Sparse Representations of Audio-Text via Compositional Contrastive Distillation.2022
 
 
 # Honors and Awards
