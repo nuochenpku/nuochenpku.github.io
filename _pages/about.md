@@ -13,10 +13,10 @@ I got my master's degree from Peking University, majored in computer science, su
 
 # Research
  My research interests focus on nlp, including question answering, cross-lingual understanding, dialog generation and multi-modal fusion.  <br>
-Indeed, my works now are focusing on **generalization** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
+Indeed, my works now are focusing on **dialogue** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
 
 # News
-* **Invited Talk** at Shanghai University Of Engineering Science and Donghua University
+* **Invited Talk** at Shanghai University Of Engineering Science and Donghua University (10/2022)
 * **Excellent Graduation Thesis of Peking University**
 * **Outstanding Graduates of Peking University**
 * **Outstanding Graduates of Beijing**
@@ -69,7 +69,7 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 
 
 # Honors and Awards
-* Excellent Graduation Thesis of Peking University and Donghua University
+* Excellent Graduation Thesis of Peking University
 * Outstanding Graduates of Peking University
 * Outstanding Graduates of Beijing
 * AAAI-2022 Scholarship
