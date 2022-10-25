@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Nuo Chen"
 title_separator          : "-"
 name                     : &name "Nuo Chen"
-description              : &description "In-coming PhD of HKUST."
+description              : &description "PhD of HKUST."
 url                      : https://nuochenpku.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : pu
