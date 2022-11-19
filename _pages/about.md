@@ -24,6 +24,12 @@ Indeed, my works now are focusing on **dialogue** and **cross-lingual language u
 
 # Publications 
 (*=equal contribution)
+*  FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering <br>
+Qichen YE, Bowen Cao, **Nuo Chen**, Weiyuan Xu, Yuexian Zou.<br>
+AAAI Conference on Artificial Intelligence (**AAAI 2023**).
+*  Human Mobility Modeling During the COVID-19 Pandemic via Deep Graph Diffusion Infomax <br>
+Yang Liu, Yu Rong, Zhuoning Guo,  **Nuo Chen**, Tingyang Xu, Fugee Tsung, Jia Li.<br>
+AAAI Conference on Artificial Intelligence (**AAAI 2023**).
 *  A Transformer-based Threshold-Free Framework for Multi-Intent NLU (<font color="#dd0000">Oral</font>） <br>
 Lisong Chen, **Nuo Chen**, Yuexian Zou.<br>
 INTERNATIONAL CONFERENCE ON COMPUTATIONAL LINGUISTICS (**COLING 2022**).
