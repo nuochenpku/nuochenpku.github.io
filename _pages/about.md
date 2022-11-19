@@ -68,7 +68,7 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 International Conference on Acoustics, Speech and Signal Processing (**ICASSP 2021**)
 
 # Preprint
-* What would Harry say? Building Dialogue Agents for Characters in a Story.2022
+* What would Harry say? Building Dialogue Agents for Characters in a Story. [[PDF]](https://arxiv.org/abs/2211.06869), [[Code]](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset), [[Dataset]](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)
 
 
 # Honors and Awards
