@@ -16,11 +16,12 @@ I got my master's degree from Peking University, majored in computer science, su
 Indeed, my works now are focusing on **dialogue** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
 
 # News
+* Servered as PC of ACL 2023.
 * **Invited Talk** at Shanghai University Of Engineering Science and Donghua University (10/2022)
 * **Excellent Graduation Thesis of Peking University**
 * **Outstanding Graduates of Peking University**
 * **Outstanding Graduates of Beijing**
-* 2022-5-1，got **100 citations** in Google Scholar!
+
 
 # Publications 
 (*=equal contribution)
