@@ -70,7 +70,9 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 International Conference on Acoustics, Speech and Signal Processing (**ICASSP 2021**)
 
 # Preprint
-* What would Harry say? Building Dialogue Agents for Characters in a Story. [[PDF]](https://arxiv.org/abs/2211.06869), [[Code]](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset), [[Dataset]](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)
+* What would Harry say? Building Dialogue Agents for Characters in a Story. [[PDF](https://arxiv.org/abs/2211.06869)], [[Code](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)], [[Dataset](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)]
+* Orca: A Few-shot Benchmark for Chinese Conversational Machine Reading Comprehension. [[PDF]](https://arxiv.org/pdf/2302.13619), [[Code]](https://github.com/nuochenpku/Orca), [[Dataset]](https://github.com/nuochenpku/Orca) 
+* Natural Response Generation for Chinese Reading Comprehension. [[PDF](https://arxiv.org/abs/2302.08817)], [[Code](https://github.com/nuochenpku/Penguin)], [[Dataset](https://github.com/nuochenpku/Penguin)] 
 
 
 # Honors and Awards
@@ -87,7 +89,7 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 * Interviewer for ACMMM, ACL, EMNLP and AAAI.
 
 # Contact
-* Email: nuochen[at]pku.edu.cn
+* Email: chennuo26[at]gmail.com & nchen022[at]connect.hkust-gz.edu.cn
 
 <!---Activity and Service--->
 <!---Experience--->
