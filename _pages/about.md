@@ -16,7 +16,7 @@ I got my master's degree from Peking University, majored in computer science, su
 Indeed, my works now are focusing on **dialogue** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
 
 # News
-* Servered as PC of ACL 2023.
+* Servered as PC member of ACL 2023.
 * Harry-Potter-Dialogue-Dataset is open-sourced [[PDF]](https://arxiv.org/abs/2211.06869), [[Code]](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset), [[Dataset]](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)
 * **Invited Talk** at Shanghai University Of Engineering Science and Donghua University (10/2022)
 * **Excellent Graduation Thesis of Peking University**
