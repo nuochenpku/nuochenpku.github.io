@@ -27,6 +27,13 @@ Indeed, my works now are focusing on **large language models** and **cross-lingu
 
 # Publications 
 (*=equal contribution)
+*  Alleviating Over-smoothing for Unsupervised Sentence Representation <br>
+**Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Cao Bowen, Daxin Jiang, Li Jia.<br>
+Conference of the Association for Computational Linguistics (**ACL 2023**).
+*  Structural Contrastive Pretraining for Cross-Lingual Comprehension  <br>
+**Nuo Chen**, Linjun Shou, Song Tengtao, Ming Gong, Jian Pei, Daxin Jiang, Li Jia.<br>
+Conference of the Association for Computational Linguistics (**ACL 2023** (findings)).
+
 *  FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering <br>
 Qichen YE, Bowen Cao, **Nuo Chen**, Weiyuan Xu, Yuexian Zou.<br>
 AAAI Conference on Artificial Intelligence (**AAAI 2023**).
