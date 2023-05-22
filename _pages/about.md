@@ -28,7 +28,7 @@ Indeed, my works now are focusing on **large language models** and **cross-lingu
 
 # Publications 
 (*=equal contribution)
-*  Alleviating Over-smoothing for Unsupervised Sentence Representation <br>
+*  Alleviating Over-smoothing for Unsupervised Sentence Representation [[PDF](https://arxiv.org/pdf/2305.06154)][[Code](https://github.com/nuochenpku/SSCL)]<br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Cao Bowen, Daxin Jiang, Li Jia.<br>
 Conference of the Association for Computational Linguistics (**ACL 2023**).
 *  Structural Contrastive Pretraining for Cross-Lingual Comprehension  <br>
