@@ -35,7 +35,7 @@ Conference of the Association for Computational Linguistics (**ACL 2023**).
 **Nuo Chen**, Linjun Shou, Song Tengtao, Ming Gong, Jian Pei, Daxin Jiang, Li Jia.<br>
 Conference of the Association for Computational Linguistics (**ACL 2023** (findings)).
 
-*  FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering <br>
+*  FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering [[PDF](https://arxiv.org/abs/2302.11799)][[Code](https://github.com/yeeeqichen/FiTs)] <br>
 Qichen YE, Bowen Cao, **Nuo Chen**, Weiyuan Xu, Yuexian Zou.<br>
 AAAI Conference on Artificial Intelligence (**AAAI 2023**).
 *  Human Mobility Modeling During the COVID-19 Pandemic via Deep Graph Diffusion Infomax <br>
