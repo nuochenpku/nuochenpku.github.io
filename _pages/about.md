@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.htm
 ---
-I am now in my first year of Phd. in datas science and analysis (DSA) at HKUST, advised by [Jia li](https://sites.google.com/view/lijia) and [Yangqiu Song](https://scholar.google.com/citations?user=MdQZ-q8AAAAJ&hl=zh-CN&oi=ao).
+I am now in my second year of Phd. in data science and analysis (DSA) at HKUST, advised by [Jia li](https://sites.google.com/view/lijia) and [Yangqiu Song](https://scholar.google.com/citations?user=MdQZ-q8AAAAJ&hl=zh-CN&oi=ao).
 I got my master's degree from Peking University, majored in computer science, supervised by [Yuexian Zou](https://web.pkusz.edu.cn/adsp/), and got my bachelor's degree from Beijing University of Posts and Telecommunications. I was employed  as a research intern by Alibaba Damo Academy, Microsoft research and  Tencent AI Lab, worked closely with [Daxin Jiang](https://scholar.google.com/citations?user=N-wAHCoAAAAJ&hl=zh-CN), [Linjun Shou](https://www.microsoft.com/en-us/research/people/lisho/), [Yan Wang](https://libertywing.github.io/yanwang.github.io/). I am looking for corporation, please feel free to contact me if you have interestes.
  
 
@@ -96,7 +96,7 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 
 # Activity and Service
 * Invited Talk at Shanghai University Of Engineering Science
-* Interviewer for ACMMM, ACL, EMNLP and AAAI.
+* Reviewer for ACMMM, ACL, EMNLP, AAAI and T-PAMI.
 
 # Contact
 * Email: chennuo26[at]gmail.com & nchen022[at]connect.hkust-gz.edu.cn
