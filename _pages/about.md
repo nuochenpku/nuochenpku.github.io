@@ -33,12 +33,10 @@ Indeed, my works now are focusing on **large language models** and **cross-lingu
 * What would Harry say? Building Dialogue Agents for Characters in a Story. [[PDF](https://arxiv.org/abs/2211.06869)], [[Code](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)], [[Dataset](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)] <br>
 **Nuo Chen**, Yan Wang, Haiyun Jiang, Deng Cai, Nuo Chen, Ziyang Chen, Jia Li. <br>
 Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023**).
-
 * Orca: A Few-shot Benchmark for Chinese Conversational Machine Reading Comprehension. [[PDF]](https://arxiv.org/pdf/2302.13619), [[Code]](https://github.com/nuochenpku/Orca), [[Dataset]](https://github.com/nuochenpku/Orca) <br>
 **Nuo Chen**, Hongguang Li, Junqing He, Yinan Bao, Xinshi Lin, Qi Yang, Jianfeng Liu, Ruyi Gan, Jiaxing
 Zhang, Baoyuan Wang, Jia Li. <br>
 Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (findings)) .
-  
 * Natural Response Generation for Chinese Reading Comprehension. [[PDF](https://arxiv.org/abs/2302.08817)], [[Code](https://github.com/nuochenpku/Penguin)], [[Dataset](https://github.com/nuochenpku/Penguin)] <br>
 **Nuo Chen**, Hongguang Li, Yinan Bao, Baoyuan Wang, Jia Li. <br>
 Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (findings)) .
