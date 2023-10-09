@@ -16,6 +16,7 @@ I got my master's degree from Peking University, majored in computer science, su
 Indeed, my works now are focusing on **large language models** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
 
 # News
+* There papers accepted by EMNLP 2023.
 * Severed as a reviewer at T-PAMI
 * Two papers accepted by ACL 2023.
 * Two Chinese QA benchmarks are released: [Penguin](https://github.com/nuochenpku/Penguin) and [Orca](https://github.com/nuochenpku/Orca).
@@ -29,6 +30,19 @@ Indeed, my works now are focusing on **large language models** and **cross-lingu
 
 # Publications 
 (*=equal contribution)
+* What would Harry say? Building Dialogue Agents for Characters in a Story. [[PDF](https://arxiv.org/abs/2211.06869)], [[Code](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)], [[Dataset](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)] <br>
+**Nuo Chen**, Yan Wang, Haiyun Jiang, Deng Cai, Nuo Chen, Ziyang Chen, Jia Li. <br>
+Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023**).
+
+* Orca: A Few-shot Benchmark for Chinese Conversational Machine Reading Comprehension. [[PDF]](https://arxiv.org/pdf/2302.13619), [[Code]](https://github.com/nuochenpku/Orca), [[Dataset]](https://github.com/nuochenpku/Orca) <br>
+**Nuo Chen**, Hongguang Li, Junqing He, Yinan Bao, Xinshi Lin, Qi Yang, Jianfeng Liu, Ruyi Gan, Jiaxing
+Zhang, Baoyuan Wang, Jia Li. <br>
+Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (findings)) .
+  
+* Natural Response Generation for Chinese Reading Comprehension. [[PDF](https://arxiv.org/abs/2302.08817)], [[Code](https://github.com/nuochenpku/Penguin)], [[Dataset](https://github.com/nuochenpku/Penguin)] <br>
+**Nuo Chen**, Hongguang Li, Yinan Bao, Baoyuan Wang, Jia Li. <br>
+Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (findings)) .
+
 *  Alleviating Over-smoothing for Unsupervised Sentence Representation [[PDF](https://arxiv.org/pdf/2305.06154)][[Code](https://github.com/nuochenpku/SSCL)]<br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Cao Bowen, Daxin Jiang, Li Jia.<br>
 Conference of the Association for Computational Linguistics (**ACL 2023**).
@@ -80,9 +94,7 @@ International Conference on Acoustics, Speech and Signal Processing (**ICASSP 20
 International Conference on Acoustics, Speech and Signal Processing (**ICASSP 2021**)
 
 # Preprint
-* What would Harry say? Building Dialogue Agents for Characters in a Story. [[PDF](https://arxiv.org/abs/2211.06869)], [[Code](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)], [[Dataset](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)]
-* Orca: A Few-shot Benchmark for Chinese Conversational Machine Reading Comprehension. [[PDF]](https://arxiv.org/pdf/2302.13619), [[Code]](https://github.com/nuochenpku/Orca), [[Dataset]](https://github.com/nuochenpku/Orca) 
-* Natural Response Generation for Chinese Reading Comprehension. [[PDF](https://arxiv.org/abs/2302.08817)], [[Code](https://github.com/nuochenpku/Penguin)], [[Dataset](https://github.com/nuochenpku/Penguin)] 
+
 
 
 # Honors and Awards
