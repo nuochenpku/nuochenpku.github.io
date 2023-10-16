@@ -40,14 +40,12 @@ Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (
 * Natural Response Generation for Chinese Reading Comprehension. [[PDF](https://arxiv.org/abs/2302.08817)], [[Code](https://github.com/nuochenpku/Penguin)], [[Dataset](https://github.com/nuochenpku/Penguin)] <br>
 **Nuo Chen**, Hongguang Li, Yinan Bao, Baoyuan Wang, Jia Li. <br>
 Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (findings)) .
-
 *  Alleviating Over-smoothing for Unsupervised Sentence Representation [[PDF](https://arxiv.org/pdf/2305.06154)][[Code](https://github.com/nuochenpku/SSCL)]<br>
 **Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Cao Bowen, Daxin Jiang, Li Jia.<br>
 Conference of the Association for Computational Linguistics (**ACL 2023**).
 *  Structural Contrastive Pretraining for Cross-Lingual Comprehension  <br>
 **Nuo Chen**, Linjun Shou, Song Tengtao, Ming Gong, Jian Pei, Daxin Jiang, Li Jia.<br>
 Conference of the Association for Computational Linguistics (**ACL 2023** (findings)).
-
 *  FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering [[PDF](https://arxiv.org/abs/2302.11799)][[Code](https://github.com/yeeeqichen/FiTs)] <br>
 Qichen YE, Bowen Cao, **Nuo Chen**, Weiyuan Xu, Yuexian Zou.<br>
 AAAI Conference on Artificial Intelligence (**AAAI 2023**).
