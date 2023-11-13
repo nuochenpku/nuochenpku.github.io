@@ -16,7 +16,7 @@ I got my master's degree from Peking University, majored in computer science, su
 Indeed, my works now are focusing on **large language models** and **cross-lingual language understanding**. I also have some experiences in designing or pre-trainig large language models, including chinese, English and multi-lingual. I am  familiar with speech and audio processing (a little, LOL)
 
 # News
-* There papers accepted by EMNLP 2023.
+* Three papers accepted by EMNLP 2023.
 * Severed as a reviewer at T-PAMI
 * Two papers accepted by ACL 2023.
 * Two Chinese QA benchmarks are released: [Penguin](https://github.com/nuochenpku/Penguin) and [Orca](https://github.com/nuochenpku/Orca).
