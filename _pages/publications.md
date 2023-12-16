@@ -3,6 +3,33 @@ title: "Publications ([Google Scholar Profile](https://scholar.google.com/citati
 permalink: /publications/
 author_profile: true
 ---
+## 2023
+
+* What would Harry say? Building Dialogue Agents for Characters in a Story. [[PDF](https://arxiv.org/abs/2211.06869)], [[Code](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)], [[Dataset](https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset)] <br>
+**Nuo Chen**, Yan Wang, Haiyun Jiang, Deng Cai, Yuhan Li, Ziyang Chen, Jia Li. <br>
+Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023**).
+* Orca: A Few-shot Benchmark for Chinese Conversational Machine Reading Comprehension. [[PDF]](https://arxiv.org/pdf/2302.13619), [[Code]](https://github.com/nuochenpku/Orca), [[Dataset]](https://github.com/nuochenpku/Orca) <br>
+**Nuo Chen**, Hongguang Li, Junqing He, Yinan Bao, Xinshi Lin, Qi Yang, Jianfeng Liu, Ruyi Gan, Jiaxing
+Zhang, Baoyuan Wang, Jia Li. <br>
+Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (findings)) .
+* Natural Response Generation for Chinese Reading Comprehension. [[PDF](https://arxiv.org/abs/2302.08817)], [[Code](https://github.com/nuochenpku/Penguin)], [[Dataset](https://github.com/nuochenpku/Penguin)] <br>
+**Nuo Chen**, Hongguang Li, Yinan Bao, Baoyuan Wang, Jia Li. <br>
+Conference on Empirical Methods in Natural Language Processing (**EMNLP 2023** (findings)) .
+*  Alleviating Over-smoothing for Unsupervised Sentence Representation [[PDF](https://arxiv.org/pdf/2305.06154)][[Code](https://github.com/nuochenpku/SSCL)]<br>
+**Nuo Chen**, Linjun Shou, Ming Gong, Jian Pei, Cao Bowen, Daxin Jiang, Li Jia.<br>
+Conference of the Association for Computational Linguistics (**ACL 2023**).
+*  Structural Contrastive Pretraining for Cross-Lingual Comprehension  <br>
+**Nuo Chen**, Linjun Shou, Song Tengtao, Ming Gong, Jian Pei, Daxin Jiang, Li Jia.<br>
+Conference of the Association for Computational Linguistics (**ACL 2023** (findings)).
+*  FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering [[PDF](https://arxiv.org/abs/2302.11799)][[Code](https://github.com/yeeeqichen/FiTs)] <br>
+Qichen YE, Bowen Cao, **Nuo Chen**, Weiyuan Xu, Yuexian Zou.<br>
+AAAI Conference on Artificial Intelligence (**AAAI 2023**).
+*  Human Mobility Modeling During the COVID-19 Pandemic via Deep Graph Diffusion Infomax <br>
+Yang Liu, Yu Rong, Zhuoning Guo,  **Nuo Chen**, Tingyang Xu, Fugee Tsung, Jia Li.<br>
+AAAI Conference on Artificial Intelligence (**AAAI 2023**).
+*  A Transformer-based Threshold-Free Framework for Multi-Intent NLU (<font color="#dd0000">Oral</font>） <br>
+Lisong Chen, **Nuo Chen**, Yuexian Zou.<br>
+
 ##  2022
 (*=equal contribution)
 * <b> Bridging the gap between language models and multilingual sequence labeling </b> [[PDF]] <br>
