@@ -79,6 +79,13 @@ function createPublicationElement(publication) {
   const pubItem = document.createElement('div');
   pubItem.className = 'publication-item';
   
+  // Add class to identify if it's selected
+  if (publication.selected === 1) {
+    pubItem.classList.add('selected-publication');
+  } else {
+    pubItem.classList.add('non-selected-publication');
+  }
+  
   // Create thumbnail
   const thumbnail = document.createElement('div');
   thumbnail.className = 'pub-thumbnail';

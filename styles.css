@@ -35,10 +35,10 @@ header {
 }
 
 .header-image img {
-  width: 130px;
-  height: 130px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 90%;
   border: 2px solid var(--border-color);
   transition: transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
 }
@@ -163,9 +163,23 @@ section {
   gap: 1.25rem;
 }
 
+/* 非精选publication隐藏图片，调整布局 */
+.non-selected-publication {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.non-selected-publication .pub-thumbnail {
+  display: none;
+}
+
+.non-selected-publication .pub-content {
+  width: 100%;
+}
+
 .pub-thumbnail {
-  width: 125px;
-  height: 125px;
+  width: 400px;
+  height: 220px;
   flex-shrink: 0;
   border: 1px solid var(--border-color);
   overflow: hidden;
@@ -444,6 +458,12 @@ strong {
   .social-links-header {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  /* 头像在移动端缩小显示 */
+  .header-image img {
+    width: 140px;
+    height: 140px;
   }
 
   /* Disable right-moving hover animations on mobile */

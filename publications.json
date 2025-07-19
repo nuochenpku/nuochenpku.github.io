@@ -1,52 +1,461 @@
 {
   "publications": [
     {
-      "title": "[Paper Title 1]",
+      "title": "Rewarding Graph Reasoning Process makes LLMs more Generalized Reasoners",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11†",
-        "Author 12†"
+        "Miao Peng*",
+        "Nuo Chen*",
+        "Zongrui Suo",
+        "Jia Li"
       ],
-      "venue": "Preprint (2025)",
-      "thumbnail": "images/thumbs/1.jpg",
-      "selected": 1,
+      "venue": "KDD 2025",
+      "thumbnail": "",
+      "selected": 0,
       "award": "",
       "links": {
-        "pdf": "#",
-        "code": "#",
-        "project": "#"
+        "pdf": "https://arxiv.org/abs/2503.00845",
+        "project": "https://github.com/Graph-Reasoner/GraphPRM"
       }
     },
     {
-      "title": "[Paper Title 2]",
+      "title": "Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations",
       "authors": [
-        "Author 1*",
-        "Author 2*",
-        "Author 3",
-        "Author 4",
-        "Author 5",
-        "Author 6",
-        "Author 7",
-        "Author 8",
-        "Author 9",
-        "Author 10",
-        "Author 11"
+        "Nuo Chen",
+        "Hongguang Li",
+        "Juhua Huang",
+        "Baoyuan Wang",
+        "Jia Li"
       ],
-      "venue": "Preprint (2025)",
+      "venue": "COLING 2025",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "Oral",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2402.11975",
+        "project": "https://github.com/nuochenpku/COMEDY"
+      }
+    },
+    {
+      "title": "Breaking Language Barriers in Multilingual Mathematical Reasoning: Insights and Observations",
+      "authors": [
+        "Nuo Chen",
+        "Zinan Zheng",
+        "Ning Wu",
+        "Ming Gong",
+        "Yangqiu Song",
+        "Dongmei Zhang",
+        "Jia Li"
+      ],
+      "venue": "EMNLP 2024",
+      "thumbnail": "images/thumbs/mathoctopus.png",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2310.20246",
+        "project": "https://mathoctopus.github.io/",
+        "zhihu": "https://zhuanlan.zhihu.com/p/664504560"
+      }
+    },
+    {
+      "title": "ControlMath: Controllable Data Generation Promotes Math Generalist Models",
+      "authors": [
+        "Nuo Chen",
+        "Ning Wu",
+        "Jianhui Chang",
+        "Jia Li"
+      ],
+      "venue": "EMNLP 2024",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2409.15376"
+      }
+    },
+    {
+      "title": "GraphWiz: An Instruction-Following Language Model for Graph Problems",
+      "authors": [
+        "Nuo Chen*",
+        "Yuhan Li*",
+        "Jianheng Tang*",
+        "Jia Li"
+      ],
+      "venue": "KDD 2024",
+      "thumbnail": "images/thumbs/graphwiz.png",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2402.16029",
+        "project": "https://github.com/nuochenpku/Graph-Reasoning-LLM",
+        "zhihu": "https://zhuanlan.zhihu.com/p/664504560"
+      }
+    },
+    {
+      "title": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Character Aligning",
+      "authors": [
+        "Nuo Chen",
+        "Yan Wang",
+        "Haiyun Jiang",
+        "Deng Cai",
+        "Yuhan Li",
+        "Ziyang Chen",
+        "Jia Li"
+      ],
+      "venue": "EMNLP 2023",
+      "thumbnail": "images/thumbs/HARRYPOTTER.png",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2211.06869",
+        "code": "https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset",
+        "dataset": "https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset"
+      }
+    },
+    {
+      "title": "Orca: A Few-shot Benchmark for Chinese Conversational Machine Reading Comprehension",
+      "authors": [
+        "Nuo Chen",
+        "Hongguang Li",
+        "Junqing He",
+        "Yinan Bao",
+        "Xinshi Lin",
+        "Qi Yang",
+        "Jianfeng Liu",
+        "Ruyi Gan",
+        "Jiaxing Zhang",
+        "Baoyuan Wang",
+        "Jia Li"
+      ],
+      "venue": "EMNLP 2023 (findings)",
       "thumbnail": "images/thumbs/2.jpg",
       "selected": 0,
       "award": "",
       "links": {
-        "pdf": "#"
+        "pdf": "https://arxiv.org/pdf/2302.13619",
+        "code": "https://github.com/nuochenpku/Orca",
+        "dataset": "https://github.com/nuochenpku/Orca"
+      }
+    },
+    {
+      "title": "Natural Response Generation for Chinese Reading Comprehension",
+      "authors": [
+        "Nuo Chen",
+        "Hongguang Li",
+        "Yinan Bao",
+        "Baoyuan Wang",
+        "Jia Li"
+      ],
+      "venue": "EMNLP 2023 (findings)",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2302.08817",
+        "code": "https://github.com/nuochenpku/Penguin",
+        "dataset": "https://github.com/nuochenpku/Penguin"
+      }
+    },
+    {
+      "title": "Alleviating Over-smoothing for Unsupervised Sentence Representation",
+      "authors": [
+        "Nuo Chen",
+        "Linjun Shou",
+        "Ming Gong",
+        "Jian Pei",
+        "Cao Bowen",
+        "Daxin Jiang",
+        "Li Jia"
+      ],
+      "venue": "ACL 2023",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2305.06154",
+        "code": "https://github.com/nuochenpku/SSCL"
+      }
+    },
+    {
+      "title": "Structural Contrastive Pretraining for Cross-Lingual Comprehension",
+      "authors": [
+        "Nuo Chen",
+        "Linjun Shou",
+        "Song Tengtao",
+        "Ming Gong",
+        "Jian Pei",
+        "Daxin Jiang",
+        "Li Jia"
+      ],
+      "venue": "ACL 2023 (findings)",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {}
+    },
+    {
+      "title": "FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering",
+      "authors": [
+        "Qichen YE",
+        "Bowen Cao",
+        "Nuo Chen",
+        "Weiyuan Xu",
+        "Yuexian Zou"
+      ],
+      "venue": "AAAI 2023",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2302.11799",
+        "code": "https://github.com/yeeeqichen/FiTs"
+      }
+    },
+    {
+      "title": "Human Mobility Modeling During the COVID-19 Pandemic via Deep Graph Diffusion Infomax",
+      "authors": [
+        "Yang Liu",
+        "Yu Rong",
+        "Zhuoning Guo",
+        "Nuo Chen",
+        "Tingyang Xu",
+        "Fugee Tsung",
+        "Jia Li"
+      ],
+      "venue": "AAAI 2023",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {}
+    },
+    {
+      "title": "A Transformer-based Threshold-Free Framework for Multi-Intent NLU",
+      "authors": [
+        "Lisong Chen",
+        "Nuo Chen",
+        "Yuexian Zou"
+      ],
+      "venue": "COLING 2022",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "Oral",
+      "links": {}
+    },
+    {
+      "title": "Automatic Prosody Annotation with Pre-Trained Text-Speech Model",
+      "authors": [
+        "Ziqian Dai",
+        "Jianwei Yu",
+        "Yan Wang",
+        "Nuo Chen",
+        "Yanyao Bian",
+        "Guangzhi Li",
+        "Deng Cai",
+        "Dong Yu"
+      ],
+      "venue": "INTERSPEECH 2022",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "code": "https://github.com/Daisyqk/Automatic-Prosody-Annotation",
+        "demo": "https://daisyqk.github.io/Automatic-Prosody-Annotation_w/"
+      }
+    },
+    {
+      "title": "Bridging the gap between language models and multilingual sequence labeling",
+      "authors": [
+        "Nuo Chen",
+        "Linjun Shou",
+        "Ming Gong",
+        "Jian Pei",
+        "Daxin Jiang"
+      ],
+      "venue": "NAACL 2022",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "Oral",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2204.05210",
+        "code": "https://github.com/nuochenpku/Multilingual-SL"
+      }
+    },
+    {
+      "title": "End-to-end Spoken Conversational Question Answering: Task, Dataset and Model",
+      "authors": [
+        "Chenyu You*",
+        "Nuo Chen*",
+        "Fenglin Liu",
+        "Xian Wu",
+        "shen Ge",
+        "Yuexian Zou"
+      ],
+      "venue": "NAACL 2022 (findings)",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2010.08923",
+        "dataset": "https://github.com/nuochenpku/End-to-end-Spoken-Conversational-Question-Answering-Task-Dataset-and-Model/blob/main/README.md"
+      }
+    },
+    {
+      "title": "From Good to Best: Two-Stage Training for Cross-Lingual Machine Reading Comprehension",
+      "authors": [
+        "Nuo Chen",
+        "Linjun Shou",
+        "Ming Gong",
+        "Jian Pei",
+        "Daxin Jiang"
+      ],
+      "venue": "AAAI 2022",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2112.04735",
+        "poster": "https://aaai-2022.virtualchair.net/poster_aaai1835"
+      }
+    },
+    {
+      "title": "Self-supervised Contrastive Learning for End-to-end Spoken Question Answering",
+      "authors": [
+        "Chenyu You*",
+        "Nuo Chen*",
+        "Yuexian Zou"
+      ],
+      "venue": "EMNLP 2021 (findings)",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2109.03381"
+      }
+    },
+    {
+      "title": "Text Anchor Based Metric Learning for Small-footprint Keyword Spotting",
+      "authors": [
+        "Li Wang",
+        "Rongzhi Gu",
+        "Nuo Chen",
+        "Yuexian Zou"
+      ],
+      "venue": "INTERSPEECH 2021",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {}
+    },
+    {
+      "title": "Contextualized Attention-based Knowledge Transfer for Spoken Conversational Question Answering",
+      "authors": [
+        "Chenyu You*",
+        "Nuo Chen*",
+        "Yuexian Zou"
+      ],
+      "venue": "INTERSPEECH 2021",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/you21c_interspeech.pdf"
+      }
+    },
+    {
+      "title": "Self-supervised Dialogue Learning for Spoken Conversational Question Answering",
+      "authors": [
+        "Nuo Chen",
+        "Chenyu You",
+        "Yuexian Zou"
+      ],
+      "venue": "INTERSPEECH 2021",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/chen21_interspeech1.pdf"
+      }
+    },
+    {
+      "title": "Multi-Modal Residual Knowledge Distillation for Spoken Question Answering",
+      "authors": [
+        "Chenyu You*",
+        "Nuo Chen*",
+        "Yuexian Zou"
+      ],
+      "venue": "IJCAI 2021",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/08/IJCAI2021%E9%99%88%E8%AF%BA.pdf"
+      }
+    },
+    {
+      "title": "Knowledge Distillation for improved accuracy in Spoken Question Answering",
+      "authors": [
+        "Chenyu You*",
+        "Nuo Chen*",
+        "Yuexian Zou"
+      ],
+      "venue": "ICASSP 2021",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/%E9%99%88%E8%AF%BA-Knowledge_Distillation_for_Improved_Accuracy_in_Spoken_Question_Answering.pdf"
+      }
+    },
+    {
+      "title": "Adaptive Bi-directional Attention: Exploring Multi-Granularity Representations for Machine Reading Comprehension",
+      "authors": [
+        "Nuo Chen",
+        "Fenglin Liu",
+        "Peilin Zhou",
+        "Yuexian Zou"
+      ],
+      "venue": "ICASSP 2021",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/%E9%99%88%E8%AF%BA-Adaptive_Bi-Directional_Attention_Exploring_Multi-Granularity_Representations_for_Machine_Reading_Comprehension.pdf"
+      }
+    },
+    {
+      "title": "The Oscars of AI Theater: A Survey on Role-Playing with Language Models",
+      "authors": [
+        "Nuo Chen",
+        "Yang Deng",
+        "Jia Li"
+      ],
+      "venue": "Preprint, 07/2024",
+      "thumbnail": "images/thumbs/2.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2407.11484",
+        "project": "https://github.com/nuochenpku/Awesome-Role-Play-Papers"
+      }
+    },
+    {
+      "title": "Beyond Surface: Probing LLaMA Across Scales and Layers",
+      "authors": [
+        "Nuo Chen",
+        "Ning Wu",
+        "Shining Liang",
+        "Ming Gong",
+        "Linjun Shou",
+        "Dongmei Zhang",
+        "Jia Li"
+      ],
+      "venue": "Preprint, 12/2023",
+      "thumbnail": "images/thumbs/1.jpg",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2312.04333",
+        "project": "https://github.com/nuochenpku/LLaMA_Analysis",
+        "zhihu": "https://zhuanlan.zhihu.com/p/669730374"
       }
     }
   ]
