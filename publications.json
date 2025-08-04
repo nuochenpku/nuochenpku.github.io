@@ -1,6 +1,24 @@
 {
   "publications": [
     {
+      "title": "Improving LLMs' Generalized Reasoning Abilities by Graph Problems",
+      "authors": [
+        "Qifan Zhang*",
+        "Nuo Chen*",
+        "Zehua Li",
+        "Miao Peng",
+        "Jing Tang",
+        "Jia Li"
+      ],
+      "venue": "COLM 2025",
+      "thumbnail": "images/thumbs/colm.png",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/abs/2507.17168"
+      }
+    },
+    {
       "title": "Rewarding Graph Reasoning Process makes LLMs more Generalized Reasoners",
       "authors": [
         "Miao Peng*",
