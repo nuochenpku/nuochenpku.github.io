@@ -1,6 +1,36 @@
 {
   "publications": [
     {
+      "title": "Qwen3 Technical Report",
+      "authors": [
+        "Qwen Team"
+      ],
+      "venue": "Technical Report",
+      "thumbnail": "images/thumbs/qwen.png",
+      "selected": 1,
+      "award": "",
+      "links": {
+        "pdf": "https://arxiv.org/pdf/2505.09388"
+      }
+    },
+    {
+      "title": "Chain of Execution Supervision Promotes General Reasoning in Large Language Models",
+      "authors": [
+        "Nuo Chen",
+        "Zehua Li",
+        "Keqin Bao",
+        "Dayiheng  Liu",
+        "Junyang Lin"
+      ],
+      "venue": "Neurips 2025",
+      "thumbnail": "images/thumbs/colm.png",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "pdf": "https://openreview.net/forum?id=QjnKsujXVG"
+      }
+    },
+    {
       "title": "Improving LLMs' Generalized Reasoning Abilities by Graph Problems",
       "authors": [
         "Qifan Zhang*",
