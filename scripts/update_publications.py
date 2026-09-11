@@ -213,6 +213,34 @@ def write_json(path: Path, value: object) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def infer_publication_year(publication: dict[str, object]) -> int | None:
+    year = publication.get("year")
+    if isinstance(year, int):
+        return year
+    venue_years = re.findall(r"\b(?:19|20)\d{2}\b", str(publication.get("venue", "")))
+    if venue_years:
+        return max(map(int, venue_years))
+    for url in publication.get("links", {}).values():
+        match = re.search(r"arxiv\.org/(?:abs|pdf)/(\d{2})\d{2}\.", str(url), re.I)
+        if match:
+            return 2000 + int(match.group(1))
+    return None
+
+
+def normalize_publication_years() -> int:
+    data = load_json(PUBLICATIONS_FILE, {"publications": []})
+    updated = 0
+    for publication in data["publications"]:
+        if not isinstance(publication.get("year"), int):
+            year = infer_publication_year(publication)
+            if year:
+                publication["year"] = year
+                updated += 1
+    if updated:
+        write_json(PUBLICATIONS_FILE, data)
+    return updated
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -225,7 +253,17 @@ def main() -> int:
         action="store_true",
         help="Import all current Scholar works not already present on the website",
     )
+    parser.add_argument(
+        "--normalize-years",
+        action="store_true",
+        help="Add a structured year to existing publication records and exit",
+    )
     args = parser.parse_args()
+
+    if args.normalize_years:
+        updated = normalize_publication_years()
+        print(f"Added structured years to {updated} publication(s).")
+        return 0
 
     scholar_publications = fetch_scholar()
     snapshot = load_json(SNAPSHOT_FILE, {"scholar_id": SCHOLAR_ID, "publication_ids": []})
@@ -263,6 +301,7 @@ def main() -> int:
                 "title": publication["title"],
                 "authors": [name.strip() for name in publication["authors"].split(",") if name.strip()],
                 "venue": venue,
+                "year": int(year) if year.isdigit() else None,
                 "thumbnail": "",
                 "selected": 0,
                 "award": "",

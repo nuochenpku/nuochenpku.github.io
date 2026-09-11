@@ -20,7 +20,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2608.03089",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:kzcSZmkxUKAC"
-      }
+      },
+      "year": 2026
     },
     {
       "title": "Beyond Rephrasing: Book-Level Organization Improves Synthetic Textbook Data for Mid-Training",
@@ -43,7 +44,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2607.28109",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:kF1pexMAQbMC"
-      }
+      },
+      "year": 2026
     },
     {
       "title": "Incentivizing in-depth reasoning over long contexts with process advantage shaping",
@@ -62,7 +64,8 @@
       "links": {
         "paper": "https://aclanthology.org/2026.findings-acl.1306/",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:mUJArPsKIAAC"
-      }
+      },
+      "year": 2026
     },
     {
       "title": "FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention",
@@ -90,7 +93,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2606.09079",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:ziOE8S1-AIUC"
-      }
+      },
+      "year": 2026
     },
     {
       "title": "Mitigating the safety alignment tax with null-space constrained policy optimization",
@@ -108,7 +112,8 @@
       "links": {
         "paper": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/e664650506f1cf2b4696df892147c06e-Abstract-Conference.html",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:YsrPvlHIBpEC"
-      }
+      },
+      "year": 2026
     },
     {
       "title": "Looprpt: Reinforcement pre-training for looped language models",
@@ -130,7 +135,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2603.19714",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:raTqNPD5sRQC"
-      }
+      },
+      "year": 2026
     },
     {
       "title": "Teaching LLM to Reason: Reinforcement Learning from Algorithmic Problems without Code",
@@ -151,7 +157,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2507.07498",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:kWvqk_afx_IC"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Reledit: Evaluating conceptual knowledge editing in language models via relational reasoning",
@@ -170,7 +177,8 @@
       "links": {
         "paper": "https://aclanthology.org/2025.findings-acl.533/",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:uVUOdF_882EC"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Revisiting lora through the lens of parameter redundancy: Spectral encoding helps",
@@ -190,7 +198,8 @@
       "links": {
         "paper": "https://aclanthology.org/2025.findings-acl.139/",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:O0nohqN1r9EC"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "How does Misinformation Affect Large Language Model Behaviors and Preferences?",
@@ -207,7 +216,8 @@
       "links": {
         "paper": "https://aclanthology.org/2025.acl-long.674/",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:1DsIQWDZLl8C"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Grapharena: Evaluating and exploring large language models on graph computation",
@@ -225,7 +235,8 @@
       "links": {
         "paper": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/77fa8253adfc8b33209639f3e9985741-Abstract-Conference.html",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:HhcuHIWmDEUC"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Gcoder: Improving large language model for generalized graph problem solving",
@@ -246,7 +257,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2410.19084",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:jFemdcug13IC"
-      }
+      },
+      "year": 2024
     },
     {
       "title": "Qwen2.5: A Party of Foundation Models",
@@ -260,7 +272,8 @@
       "links": {
         "paper": "https://qwenlm.github.io/blog/qwen2.5/",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:w0F2JDEymm0C"
-      }
+      },
+      "year": 2024
     },
     {
       "title": "From good to great: Improving math reasoning with tool-augmented interleaf prompting",
@@ -277,7 +290,8 @@
       "links": {
         "paper": "https://aclanthology.org/2024.nlrse-1.7/",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:-mN3Mh-tlDkC"
-      }
+      },
+      "year": 2024
     },
     {
       "title": "Improving retrieval-based dialogue system via syntax-informed attention",
@@ -295,7 +309,8 @@
       "links": {
         "paper": "https://ieeexplore.ieee.org/abstract/document/10095548/",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:1lhNe0rCu4AC"
-      }
+      },
+      "year": 2023
     },
     {
       "title": "Bridge the gap between language models and tabular understanding",
@@ -316,7 +331,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2302.09302",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:QD3KBmkZPeQC"
-      }
+      },
+      "year": 2023
     },
     {
       "title": "Exploring and Exploiting Multi-Granularity Representations for Machine Reading Comprehension",
@@ -331,7 +347,8 @@
       "links": {
         "paper": "https://arxiv.org/abs/2208.08750",
         "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:NDuN12AVoxsC"
-      }
+      },
+      "year": 2022
     },
     {
       "title": "Qwen3 Technical Report",
@@ -344,7 +361,8 @@
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/pdf/2505.09388"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Chain of Execution Supervision Promotes General Reasoning in Large Language Models",
@@ -361,7 +379,8 @@
       "award": "",
       "links": {
         "pdf": "https://openreview.net/forum?id=QjnKsujXVG"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Improving LLMs' Generalized Reasoning Abilities by Graph Problems",
@@ -379,7 +398,8 @@
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2507.17168"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Rewarding Graph Reasoning Process makes LLMs more Generalized Reasoners",
@@ -396,7 +416,8 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2503.00845",
         "project": "https://github.com/Graph-Reasoner/GraphPRM"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Compress to Impress: Unleashing the Potential of Compressive Memory in Real-World Long-Term Conversations",
@@ -414,7 +435,8 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2402.11975",
         "project": "https://github.com/nuochenpku/COMEDY"
-      }
+      },
+      "year": 2025
     },
     {
       "title": "Breaking Language Barriers in Multilingual Mathematical Reasoning: Insights and Observations",
@@ -428,14 +450,15 @@
         "Jia Li"
       ],
       "venue": "EMNLP 2024",
-      "thumbnail": "images/thumbs/mathoctopus.png",
+      "thumbnail": "",
       "selected": 0,
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2310.20246",
         "project": "https://mathoctopus.github.io/",
         "zhihu": "https://zhuanlan.zhihu.com/p/664504560"
-      }
+      },
+      "year": 2024
     },
     {
       "title": "ControlMath: Controllable Data Generation Promotes Math Generalist Models",
@@ -451,7 +474,8 @@
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2409.15376"
-      }
+      },
+      "year": 2024
     },
     {
       "title": "GraphWiz: An Instruction-Following Language Model for Graph Problems",
@@ -469,7 +493,8 @@
         "pdf": "https://arxiv.org/abs/2402.16029",
         "project": "https://github.com/nuochenpku/Graph-Reasoning-LLM",
         "zhihu": "https://zhuanlan.zhihu.com/p/664504560"
-      }
+      },
+      "year": 2024
     },
     {
       "title": "Large Language Models Meet Harry Potter: A Bilingual Dataset for Character Aligning",
@@ -490,7 +515,8 @@
         "pdf": "https://arxiv.org/abs/2211.06869",
         "code": "https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset",
         "dataset": "https://github.com/nuochenpku/Harry-Potter-Dialogue-Dataset"
-      }
+      },
+      "year": 2023
     },
     {
       "title": "Orca: A Few-shot Benchmark for Chinese Conversational Machine Reading Comprehension",
@@ -515,7 +541,8 @@
         "pdf": "https://arxiv.org/pdf/2302.13619",
         "code": "https://github.com/nuochenpku/Orca",
         "dataset": "https://github.com/nuochenpku/Orca"
-      }
+      },
+      "year": 2023
     },
     {
       "title": "Natural Response Generation for Chinese Reading Comprehension",
@@ -534,7 +561,8 @@
         "pdf": "https://arxiv.org/abs/2302.08817",
         "code": "https://github.com/nuochenpku/Penguin",
         "dataset": "https://github.com/nuochenpku/Penguin"
-      }
+      },
+      "year": 2023
     },
     {
       "title": "Alleviating Over-smoothing for Unsupervised Sentence Representation",
@@ -554,7 +582,8 @@
       "links": {
         "pdf": "https://arxiv.org/pdf/2305.06154",
         "code": "https://github.com/nuochenpku/SSCL"
-      }
+      },
+      "year": 2023
     },
     {
       "title": "Structural Contrastive Pretraining for Cross-Lingual Comprehension",
@@ -571,7 +600,8 @@
       "thumbnail": "images/thumbs/1.jpg",
       "selected": 0,
       "award": "",
-      "links": {}
+      "links": {},
+      "year": 2023
     },
     {
       "title": "FiTs: Fine-grained Two-stage Training for Knowledge Base Question Answering",
@@ -589,7 +619,8 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2302.11799",
         "code": "https://github.com/yeeeqichen/FiTs"
-      }
+      },
+      "year": 2023
     },
     {
       "title": "Human Mobility Modeling During the COVID-19 Pandemic via Deep Graph Diffusion Infomax",
@@ -606,7 +637,8 @@
       "thumbnail": "images/thumbs/1.jpg",
       "selected": 0,
       "award": "",
-      "links": {}
+      "links": {},
+      "year": 2023
     },
     {
       "title": "A Transformer-based Threshold-Free Framework for Multi-Intent NLU",
@@ -619,7 +651,8 @@
       "thumbnail": "images/thumbs/2.jpg",
       "selected": 0,
       "award": "Oral",
-      "links": {}
+      "links": {},
+      "year": 2022
     },
     {
       "title": "Automatic Prosody Annotation with Pre-Trained Text-Speech Model",
@@ -640,7 +673,8 @@
       "links": {
         "code": "https://github.com/Daisyqk/Automatic-Prosody-Annotation",
         "demo": "https://daisyqk.github.io/Automatic-Prosody-Annotation_w/"
-      }
+      },
+      "year": 2022
     },
     {
       "title": "Bridging the gap between language models and multilingual sequence labeling",
@@ -658,7 +692,8 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2204.05210",
         "code": "https://github.com/nuochenpku/Multilingual-SL"
-      }
+      },
+      "year": 2022
     },
     {
       "title": "End-to-end Spoken Conversational Question Answering: Task, Dataset and Model",
@@ -677,7 +712,8 @@
       "links": {
         "pdf": "https://arxiv.org/pdf/2010.08923",
         "dataset": "https://github.com/nuochenpku/End-to-end-Spoken-Conversational-Question-Answering-Task-Dataset-and-Model/blob/main/README.md"
-      }
+      },
+      "year": 2022
     },
     {
       "title": "From Good to Best: Two-Stage Training for Cross-Lingual Machine Reading Comprehension",
@@ -695,7 +731,8 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2112.04735",
         "poster": "https://aaai-2022.virtualchair.net/poster_aaai1835"
-      }
+      },
+      "year": 2022
     },
     {
       "title": "Self-supervised Contrastive Learning for End-to-end Spoken Question Answering",
@@ -710,7 +747,8 @@
       "award": "",
       "links": {
         "pdf": "https://arxiv.org/abs/2109.03381"
-      }
+      },
+      "year": 2021
     },
     {
       "title": "Text Anchor Based Metric Learning for Small-footprint Keyword Spotting",
@@ -724,7 +762,8 @@
       "thumbnail": "images/thumbs/2.jpg",
       "selected": 0,
       "award": "",
-      "links": {}
+      "links": {},
+      "year": 2021
     },
     {
       "title": "Contextualized Attention-based Knowledge Transfer for Spoken Conversational Question Answering",
@@ -739,7 +778,8 @@
       "award": "",
       "links": {
         "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/you21c_interspeech.pdf"
-      }
+      },
+      "year": 2021
     },
     {
       "title": "Self-supervised Dialogue Learning for Spoken Conversational Question Answering",
@@ -754,7 +794,8 @@
       "award": "",
       "links": {
         "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/chen21_interspeech1.pdf"
-      }
+      },
+      "year": 2021
     },
     {
       "title": "Multi-Modal Residual Knowledge Distillation for Spoken Question Answering",
@@ -769,7 +810,8 @@
       "award": "",
       "links": {
         "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/08/IJCAI2021%E9%99%88%E8%AF%BA.pdf"
-      }
+      },
+      "year": 2021
     },
     {
       "title": "Knowledge Distillation for improved accuracy in Spoken Question Answering",
@@ -784,7 +826,8 @@
       "award": "",
       "links": {
         "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/%E9%99%88%E8%AF%BA-Knowledge_Distillation_for_Improved_Accuracy_in_Spoken_Question_Answering.pdf"
-      }
+      },
+      "year": 2021
     },
     {
       "title": "Adaptive Bi-directional Attention: Exploring Multi-Granularity Representations for Machine Reading Comprehension",
@@ -800,7 +843,8 @@
       "award": "",
       "links": {
         "pdf": "https://web.pkusz.edu.cn/adsp/files/2021/10/%E9%99%88%E8%AF%BA-Adaptive_Bi-Directional_Attention_Exploring_Multi-Granularity_Representations_for_Machine_Reading_Comprehension.pdf"
-      }
+      },
+      "year": 2021
     },
     {
       "title": "The Oscars of AI Theater: A Survey on Role-Playing with Language Models",
@@ -816,7 +860,8 @@
       "links": {
         "pdf": "https://arxiv.org/abs/2407.11484",
         "project": "https://github.com/nuochenpku/Awesome-Role-Play-Papers"
-      }
+      },
+      "year": 2024
     },
     {
       "title": "Beyond Surface: Probing LLaMA Across Scales and Layers",
@@ -837,7 +882,8 @@
         "pdf": "https://arxiv.org/abs/2312.04333",
         "project": "https://github.com/nuochenpku/LLaMA_Analysis",
         "zhihu": "https://zhuanlan.zhihu.com/p/669730374"
-      }
+      },
+      "year": 2023
     }
   ]
 }

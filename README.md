@@ -21,7 +21,9 @@ profile against `.scholar/publication_ids.json`; newly discovered works are
 prepended to `publications.json` while existing hand-curated entries are left
 unchanged. The initial import added Scholar works that were missing from the
 website. New entries are unselected by default and include paper and Scholar
-links whenever Scholar provides them.
+links whenever Scholar provides them. The website opens on the eight most
+recent publications and also provides Selected and All views; All is grouped
+by year.
 
 Google Scholar does not provide an official public profile API and may
 occasionally block automated requests. In that case the workflow fails without

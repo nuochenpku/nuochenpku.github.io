@@ -1,225 +1,302 @@
-// Global variables
-let allPublications = [];
-let showingSelected = true;
+const RECENT_PUBLICATION_LIMIT = 8;
+const CURRENT_AUTHOR = 'nuo chen';
+const LINK_LABELS = {
+  pdf: 'PDF',
+  paper: 'Paper',
+  code: 'Code',
+  project: 'Project',
+  dataset: 'Dataset',
+  demo: 'Demo',
+  poster: 'Poster',
+  zhihu: 'Zhihu',
+  scholar: 'Google Scholar'
+};
 
-// Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
-  // Load publications data
+let allPublications = [];
+let activePublicationView = 'recent';
+let modalTrigger = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+  initializeSections();
+  initializePublicationViews();
+  initializeNews();
+  initializeModal();
+  document.getElementById('current-year').textContent = new Date().getFullYear();
   loadPublications();
-  
-  // Initialize animation delays for sections
-  const sections = document.querySelectorAll('section');
-  sections.forEach((section, index) => {
-    section.style.animationDelay = `${index * 0.1}s`;
-  });
-  
-  // Add event listener for toggle button
-  const toggleButton = document.getElementById('toggle-publications');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', togglePublications);
-  }
 });
 
-// Load publications from JSON file
-function loadPublications() {
-  fetch('publications.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Network response was not ok: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log("Publications loaded successfully:", data);
-      allPublications = data.publications;
-      renderPublications(true);
-    })
-    .catch(error => {
-      console.error('Error loading publications:', error);
-      // Create fallback publications display if JSON loading fails
-      displayFallbackPublications();
-    });
-}
-
-// Fallback if JSON loading fails
-function displayFallbackPublications() {
-  const container = document.getElementById('publications-container');
-  container.innerHTML = `Error loading publications.`;
-}
-
-// Toggle between showing all or selected publications
-function togglePublications() {
-  showingSelected = !showingSelected;
-  renderPublications(showingSelected);
-  
-  // Update button text
-  const toggleButton = document.getElementById('toggle-publications');
-  toggleButton.textContent = showingSelected ? 'Show All' : 'Show Selected';
-  const toggleHeader = document.getElementById('toggle-header');
-  toggleHeader.textContent = showingSelected ? 'Selected Publications' : 'All Publications';
-}
-
-// Render publications based on selection state
-function renderPublications(selectedOnly) {
-  const publicationsContainer = document.getElementById('publications-container');
-  publicationsContainer.innerHTML = '';
-  
-  const pubsToShow = selectedOnly ? 
-    allPublications.filter(pub => pub.selected === 1) : 
-    allPublications;
-  
-  pubsToShow.forEach(publication => {
-    const pubElement = createPublicationElement(publication);
-    publicationsContainer.appendChild(pubElement);
+function initializeSections() {
+  document.querySelectorAll('section').forEach((section, index) => {
+    section.style.animationDelay = `${index * 0.08}s`;
   });
 }
 
-// Create HTML element for a publication
-function createPublicationElement(publication) {
-  const pubItem = document.createElement('div');
-  pubItem.className = 'publication-item';
-  
-  // Add class to identify if it's selected
-  if (publication.selected === 1) {
-    pubItem.classList.add('selected-publication');
-  } else {
-    pubItem.classList.add('non-selected-publication');
+function initializePublicationViews() {
+  document.querySelectorAll('[data-publication-view]').forEach(button => {
+    button.addEventListener('click', () => {
+      activePublicationView = button.dataset.publicationView;
+      renderPublications();
+    });
+  });
+}
+
+function initializeNews() {
+  const newsContainer = document.getElementById('news-container');
+  const toggle = document.getElementById('toggle-news');
+  const newsItems = newsContainer.querySelectorAll('.news-list li');
+
+  if (newsItems.length <= 7) {
+    return;
   }
-  
-  // Create thumbnail
-  const thumbnail = document.createElement('div');
-  thumbnail.className = 'pub-thumbnail';
-  if (publication.thumbnail) {
-    thumbnail.onclick = () => openModal(publication.thumbnail);
-    const thumbnailImg = document.createElement('img');
-    thumbnailImg.src = publication.thumbnail;
-    thumbnailImg.alt = `${publication.title} thumbnail`;
-    thumbnail.appendChild(thumbnailImg);
+
+  newsContainer.classList.add('collapsed');
+  toggle.hidden = false;
+  toggle.addEventListener('click', () => {
+    const isCollapsed = newsContainer.classList.toggle('collapsed');
+    toggle.setAttribute('aria-expanded', String(!isCollapsed));
+    toggle.textContent = isCollapsed ? 'Show Earlier News' : 'Show Less';
+  });
+}
+
+function initializeModal() {
+  const modal = document.getElementById('imageModal');
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', event => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !modal.hidden) {
+      closeModal();
+    }
+  });
+}
+
+async function loadPublications() {
+  const container = document.getElementById('publications-container');
+  try {
+    const response = await fetch('publications.json');
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    allPublications = sortPublications(Array.isArray(data.publications) ? data.publications : []);
+    renderPublications();
+  } catch (error) {
+    console.error('Error loading publications:', error);
+    container.removeAttribute('aria-busy');
+    container.replaceChildren(createMessage('Publications could not be loaded. Please try again later.'));
+    document.getElementById('publication-status').textContent = 'Publications could not be loaded.';
   }
-  
-  // Create content container
+}
+
+function publicationYear(publication) {
+  if (Number.isInteger(publication.year)) {
+    return publication.year;
+  }
+
+  const venueYears = String(publication.venue || '').match(/\b(?:19|20)\d{2}\b/g);
+  if (venueYears) {
+    return Math.max(...venueYears.map(Number));
+  }
+
+  const arxivLink = Object.values(publication.links || {}).find(value =>
+    /arxiv\.org\/(?:abs|pdf)\/(\d{2})\d{2}\./i.test(String(value))
+  );
+  if (arxivLink) {
+    const match = String(arxivLink).match(/arxiv\.org\/(?:abs|pdf)\/(\d{2})\d{2}\./i);
+    return 2000 + Number(match[1]);
+  }
+
+  return 0;
+}
+
+function sortPublications(publications) {
+  return publications
+    .map((publication, originalIndex) => ({ publication, originalIndex }))
+    .sort((left, right) =>
+      publicationYear(right.publication) - publicationYear(left.publication) ||
+      left.originalIndex - right.originalIndex
+    )
+    .map(item => item.publication);
+}
+
+function publicationsForView(view) {
+  if (view === 'selected') {
+    return allPublications.filter(publication => publication.selected === 1);
+  }
+  if (view === 'all') {
+    return allPublications;
+  }
+  return allPublications.slice(0, RECENT_PUBLICATION_LIMIT);
+}
+
+function renderPublications() {
+  const container = document.getElementById('publications-container');
+  const publications = publicationsForView(activePublicationView);
+  const fragment = document.createDocumentFragment();
+  let previousYear = null;
+
+  document.querySelectorAll('[data-publication-view]').forEach(button => {
+    button.setAttribute(
+      'aria-pressed',
+      String(button.dataset.publicationView === activePublicationView)
+    );
+  });
+
+  publications.forEach(publication => {
+    const year = publicationYear(publication);
+    if (activePublicationView === 'all' && year !== previousYear) {
+      const yearHeading = document.createElement('h3');
+      yearHeading.className = 'publication-year-heading';
+      yearHeading.textContent = year || 'Earlier';
+      fragment.appendChild(yearHeading);
+      previousYear = year;
+    }
+    fragment.appendChild(
+      createPublicationElement(publication, activePublicationView === 'selected')
+    );
+  });
+
+  if (!publications.length) {
+    fragment.appendChild(createMessage('No publications are available in this view.'));
+  }
+
+  container.replaceChildren(fragment);
+  container.removeAttribute('aria-busy');
+  const viewLabel = activePublicationView === 'all' ? 'all' : activePublicationView;
+  document.getElementById('publication-status').textContent =
+    `Showing ${publications.length} ${viewLabel} publication${publications.length === 1 ? '' : 's'}.`;
+}
+
+function createMessage(text) {
+  const message = document.createElement('p');
+  message.className = 'status-message';
+  message.textContent = text;
+  return message;
+}
+
+function normalizedAuthorName(name) {
+  return String(name).replace(/\*/g, '').replace(/\s+/g, ' ').trim().toLocaleLowerCase('en');
+}
+
+function createPublicationElement(publication, showThumbnail) {
+  const article = document.createElement('article');
+  article.className = showThumbnail ? 'publication-item publication-highlight' : 'publication-item publication-compact';
+
+  if (showThumbnail && publication.thumbnail) {
+    article.classList.add('has-thumbnail');
+    const thumbnail = document.createElement('button');
+    thumbnail.className = 'pub-thumbnail';
+    thumbnail.type = 'button';
+    thumbnail.setAttribute('aria-label', `View image for ${publication.title}`);
+    thumbnail.addEventListener('click', () => openModal(publication, thumbnail));
+
+    const image = document.createElement('img');
+    image.src = publication.thumbnail;
+    image.alt = '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.width = 400;
+    image.height = 220;
+    thumbnail.appendChild(image);
+    article.appendChild(thumbnail);
+  }
+
   const content = document.createElement('div');
   content.className = 'pub-content';
-  
-  // Add title
-  const title = document.createElement('div');
+
+  const title = document.createElement('h3');
   title.className = 'pub-title';
   title.textContent = publication.title;
   content.appendChild(title);
-  
-  // Add authors with highlight
+
   const authors = document.createElement('div');
   authors.className = 'pub-authors';
-  
-  // Format authors with highlighting
-  let authorsHTML = '';
-  publication.authors.forEach((author, index) => {
-    if (author.includes('Author 3')) { // TODO: Highlight specific author
-      authorsHTML += `<span class="highlight-name">${author}</span>`;
-    } else {
-      authorsHTML += author;
+  (publication.authors || []).forEach((author, index, authorList) => {
+    const authorElement = document.createElement('span');
+    authorElement.textContent = author;
+    if (normalizedAuthorName(author) === CURRENT_AUTHOR) {
+      authorElement.className = 'highlight-name';
     }
-    
-    if (index < publication.authors.length - 1) {
-      authorsHTML += ', ';
+    authors.appendChild(authorElement);
+    if (index < authorList.length - 1) {
+      authors.appendChild(document.createTextNode(', '));
     }
   });
-  
-  authors.innerHTML = authorsHTML;
   content.appendChild(authors);
-  
-  // Add venue with award if present
+
   const venueContainer = document.createElement('div');
   venueContainer.className = 'pub-venue-container';
-  
   const venue = document.createElement('div');
   venue.className = 'pub-venue';
-  venue.textContent = publication.venue;
+  venue.textContent = publication.venue || String(publicationYear(publication) || '');
   venueContainer.appendChild(venue);
-  
-  // Add award if it exists
-  if (publication.award && publication.award.length > 0) {
-    const award = document.createElement('div');
+
+  if (publication.award) {
+    const award = document.createElement('span');
     award.className = 'pub-award';
     award.textContent = publication.award;
     venueContainer.appendChild(award);
   }
-  
   content.appendChild(venueContainer);
-  
-  // Add links if they exist
-  if (publication.links) {
-    const links = document.createElement('div');
-    links.className = 'pub-links';
-    
-    if (publication.links.pdf) {
-      const pdfLink = document.createElement('a');
-      pdfLink.href = publication.links.pdf;
-      pdfLink.textContent = '[PDF]';
-      links.appendChild(pdfLink);
-    }
 
-    if (publication.links.paper) {
-      const paperLink = document.createElement('a');
-      paperLink.href = publication.links.paper;
-      paperLink.textContent = '[Paper]';
-      links.appendChild(paperLink);
-    }
-    
-    if (publication.links.code) {
-      const codeLink = document.createElement('a');
-      codeLink.href = publication.links.code;
-      codeLink.textContent = '[Code]';
-      links.appendChild(codeLink);
-    }
-    
-    if (publication.links.project) {
-      const projectLink = document.createElement('a');
-      projectLink.href = publication.links.project;
-      projectLink.textContent = '[Project Page]';
-      links.appendChild(projectLink);
-    }
-
-    if (publication.links.scholar) {
-      const scholarLink = document.createElement('a');
-      scholarLink.href = publication.links.scholar;
-      scholarLink.textContent = '[Google Scholar]';
-      links.appendChild(scholarLink);
-    }
-    
+  const links = createPublicationLinks(publication);
+  if (links.childElementCount) {
     content.appendChild(links);
   }
-  
-  // Assemble the publication item
-  pubItem.appendChild(thumbnail);
-  pubItem.appendChild(content);
-  
-  return pubItem;
+
+  article.appendChild(content);
+  return article;
 }
 
-// Modal functionality for viewing original images
-function openModal(imageSrc) {
+function createPublicationLinks(publication) {
+  const container = document.createElement('div');
+  container.className = 'pub-links';
+  Object.entries(LINK_LABELS).forEach(([type, label]) => {
+    const url = publication.links && publication.links[type];
+    if (!url) {
+      return;
+    }
+    const link = document.createElement('a');
+    link.href = url;
+    link.textContent = `[${label}]`;
+    link.setAttribute('aria-label', `${label} for ${publication.title}`);
+    container.appendChild(link);
+  });
+  return container;
+}
+
+function openModal(publication, trigger) {
   const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImage');
-  modal.style.display = "block";
-  setTimeout(() => {
-    modal.classList.add('show');
-  }, 10);
-  modalImg.src = imageSrc;
+  const image = document.getElementById('modalImage');
+  modalTrigger = trigger;
+  image.src = publication.thumbnail;
+  image.alt = `Preview for ${publication.title}`;
+  modal.hidden = false;
+  document.body.classList.add('modal-open');
+  setPageContentInert(true);
+  document.getElementById('modal-close').focus();
 }
 
 function closeModal() {
   const modal = document.getElementById('imageModal');
-  modal.classList.remove('show');
-  setTimeout(() => {
-    modal.style.display = "none";
-  }, 300);
+  if (modal.hidden) {
+    return;
+  }
+  modal.hidden = true;
+  document.body.classList.remove('modal-open');
+  setPageContentInert(false);
+  document.getElementById('modalImage').removeAttribute('src');
+  if (modalTrigger) {
+    modalTrigger.focus();
+    modalTrigger = null;
+  }
 }
 
-// Close modal when clicking outside the image
-window.onclick = function(event) {
-  const modal = document.getElementById('imageModal');
-  if (event.target == modal) {
-    closeModal();
-  }
+function setPageContentInert(isInert) {
+  document.querySelectorAll('body > :not(#imageModal)').forEach(element => {
+    element.inert = isInert;
+  });
 }

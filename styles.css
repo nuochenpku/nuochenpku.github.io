@@ -10,6 +10,14 @@
   --transition-time: 0.3s;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 body {
   font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
   line-height: 1.6;
@@ -21,6 +29,23 @@ body {
   font-weight: 300;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2000;
+  padding: 0.65rem 0.9rem;
+  border-radius: 4px;
+  color: #fff;
+  background: var(--accent-color);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  color: #fff;
+  transform: translateY(0);
+}
+
 header {
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
@@ -28,6 +53,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
 .header-content {
@@ -35,8 +66,8 @@ header {
 }
 
 .header-image img {
-  width: 250px;
-  height: 250px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
   border-radius: 90%;
   border: 2px solid var(--border-color);
@@ -94,7 +125,7 @@ nav a:hover, .social-links-header a:hover {
 
 .social-links-header {
   display: flex;
-  gap: 1.25rem;
+  gap: 0.35rem;
   margin: 1.2rem 0;
 }
 
@@ -136,52 +167,80 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.toggle-publications {
-  background-color: rgba(74, 116, 185, 0.08);
-  color: var(--accent-color);
+.publication-views {
+  display: inline-flex;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border-radius: 6px;
+  background: rgba(74, 116, 185, 0.08);
+}
+
+.publication-views button,
+.text-button {
   border: none;
-  padding: 0.5rem 1rem;
+  color: var(--accent-color);
+  background: transparent;
+  font: inherit;
+  font-size: 0.86rem;
+  padding: 0.45rem 0.75rem;
   border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
-  transition: all var(--transition-time) ease;
+  transition: color var(--transition-time) ease, background-color var(--transition-time) ease;
 }
 
-.toggle-publications:hover {
+.publication-views button:hover,
+.publication-views button[aria-pressed="true"] {
   background-color: var(--accent-color);
   color: white;
+}
+
+.text-button {
+  margin-top: 0.25rem;
+  padding-left: 0;
+}
+
+.text-button:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
 .publication-item {
   margin-bottom: 1.5rem;
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--border-color);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.25rem;
+  min-width: 0;
 }
 
-/* 非精选publication隐藏图片，调整布局 */
-.non-selected-publication {
-  flex-direction: column;
+.publication-highlight.has-thumbnail {
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+}
+
+.publication-compact {
   gap: 0.5rem;
 }
 
-.non-selected-publication .pub-thumbnail {
-  display: none;
-}
-
-.non-selected-publication .pub-content {
-  width: 100%;
+.publication-year-heading {
+  margin: 2rem 0 0.4rem;
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .pub-thumbnail {
-  width: 400px;
-  height: 220px;
-  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 20 / 11;
+  padding: 0;
   border: 1px solid var(--border-color);
+  background: #f8fafc;
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -190,6 +249,7 @@ section {
 }
 
 .pub-thumbnail img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -201,13 +261,15 @@ section {
 }
 
 .pub-content {
-  flex: 1;
+  min-width: 0;
 }
 
 .pub-title {
   font-weight: 500;
-  margin-bottom: 0.4rem;
+  margin: 0 0 0.4rem;
   font-size: 1.05rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
 }
 
 .pub-authors {
@@ -276,6 +338,11 @@ section {
   background-color: rgba(74, 116, 185, 0.08);
 }
 
+.status-message {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 .pub-links a:hover {
   color: #fff;
   background-color: var(--accent-color);
@@ -308,14 +375,7 @@ section {
 
 /* News section */
 .news-container {
-  max-height: 300px;
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.news-container::-webkit-scrollbar {
-  display: none;
+  position: relative;
 }
 
 .news-list {
@@ -335,11 +395,24 @@ section {
   border-left-color: var(--accent-color);
 }
 
+.news-container.collapsed .news-list li:nth-child(n+8) {
+  display: none;
+}
+
+.award-emphasis {
+  color: #b42318;
+  font-weight: 600;
+}
+
 /* Services and misc */
 .service-title {
   font-weight: 500;
   margin-bottom: 0.35rem;
   color: var(--accent-color);
+}
+
+.paper-box-text {
+  font-size: 1rem;
 }
 
 .service-category p, .misc-item p {
@@ -387,26 +460,25 @@ strong {
 
 /* Modal styles */
 .modal {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 1000;
-  padding-top: 100px;
+  padding: 4rem 2rem 2rem;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.85);
-  transition: opacity var(--transition-time);
-  opacity: 0;
 }
 
-.modal.show {
-  opacity: 1;
+.modal-open {
+  overflow: hidden;
 }
 
 .modal-content {
-  margin: auto;
   display: block;
   max-width: 85%;
   max-height: 85%;
@@ -430,8 +502,13 @@ strong {
   position: absolute;
   top: 15px;
   right: 35px;
+  width: 44px;
+  height: 44px;
+  border: 0;
   color: #f1f1f1;
+  background: transparent;
   font-size: 35px;
+  line-height: 1;
   font-weight: normal;
   cursor: pointer;
   transition: color var(--transition-time);
@@ -444,8 +521,29 @@ strong {
   transform: scale(1.1);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
 /* Responsive design fixes */
 @media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
   /* Make header stack vertically on mobile */
   header {
     flex-direction: column-reverse;
@@ -466,10 +564,36 @@ strong {
     height: 140px;
   }
 
+  .publications-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .publication-highlight.has-thumbnail {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-views {
+    width: 100%;
+  }
+
+  .publication-views button {
+    flex: 1;
+  }
+
   /* Disable right-moving hover animations on mobile */
   .publication-item:hover, .award-item:hover, 
   .service-category:hover, .misc-item:hover, .news-list li:hover,
   nav a:hover, .social-links-header a:hover, .pub-links a:hover {
     transform: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
