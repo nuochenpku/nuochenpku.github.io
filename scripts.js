@@ -158,6 +158,13 @@ function createPublicationElement(publication) {
       pdfLink.textContent = '[PDF]';
       links.appendChild(pdfLink);
     }
+
+    if (publication.links.paper) {
+      const paperLink = document.createElement('a');
+      paperLink.href = publication.links.paper;
+      paperLink.textContent = '[Paper]';
+      links.appendChild(paperLink);
+    }
     
     if (publication.links.code) {
       const codeLink = document.createElement('a');

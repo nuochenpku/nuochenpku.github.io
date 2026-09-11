@@ -27,6 +27,23 @@ SNAPSHOT_FILE = ROOT / ".scholar" / "publication_ids.json"
 SCHOLAR_ID = "qFS5KY0AAAAJ"
 SCHOLAR_ORIGIN = "https://scholar.google.com"
 
+# Scholar sometimes keeps an arXiv/preprint title after the final publication
+# has been renamed. These pairs are the same work and must not be duplicated.
+TITLE_ALIAS_GROUPS = [
+    {
+        "graphwiz an instruction following language model for graph computational problems",
+        "graphwiz an instruction following language model for graph problems",
+    },
+    {
+        "what would harry say building dialogue agents for characters in a story",
+        "large language models meet harry potter a bilingual dataset for character aligning",
+    },
+    {
+        "self supervised contrastive cross modality representation learning for spoken question answering",
+        "self supervised contrastive learning for end to end spoken question answering",
+    },
+]
+
 
 class ScholarParser(HTMLParser):
     def __init__(self) -> None:
@@ -100,16 +117,15 @@ def same_title(left: str, right: str) -> bool:
     left_norm, right_norm = normalize_title(left), normalize_title(right)
     if left_norm == right_norm:
         return True
+    if any({left_norm, right_norm}.issubset(group) for group in TITLE_ALIAS_GROUPS):
+        return True
     # Scholar occasionally changes punctuation or expands a subtitle.
     return SequenceMatcher(None, left_norm, right_norm).ratio() >= 0.92
 
 
-def fetch_scholar(retries: int = 3) -> list[dict[str, str]]:
-    query = urllib.parse.urlencode(
-        {"user": SCHOLAR_ID, "hl": "en", "pagesize": "100", "sortby": "pubdate"}
-    )
+def fetch_url(url: str, retries: int = 3) -> str:
     request = urllib.request.Request(
-        f"{SCHOLAR_ORIGIN}/citations?{query}",
+        url,
         headers={
             "User-Agent": (
                 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -123,16 +139,67 @@ def fetch_scholar(retries: int = 3) -> list[dict[str, str]]:
         try:
             with urllib.request.urlopen(request, timeout=30) as response:
                 body = response.read().decode("utf-8", errors="replace")
-            parser = ScholarParser()
-            parser.feed(body)
-            if not parser.publications:
-                raise RuntimeError("Scholar returned no publications (possibly a CAPTCHA)")
-            return parser.publications
+            if "unusual traffic" in body.casefold() or "not a robot" in body.casefold():
+                raise RuntimeError("Google Scholar returned a CAPTCHA")
+            return body
         except (urllib.error.URLError, TimeoutError, RuntimeError) as error:
             last_error = error
             if attempt + 1 < retries:
                 time.sleep(2**attempt)
-    raise RuntimeError(f"Unable to read Google Scholar after {retries} attempts: {last_error}")
+    raise RuntimeError(f"Unable to read {url} after {retries} attempts: {last_error}")
+
+
+def fetch_scholar(retries: int = 3) -> list[dict[str, str]]:
+    query = urllib.parse.urlencode(
+        {"user": SCHOLAR_ID, "hl": "en", "pagesize": "100", "sortby": "pubdate"}
+    )
+    body = fetch_url(f"{SCHOLAR_ORIGIN}/citations?{query}", retries=retries)
+    parser = ScholarParser()
+    parser.feed(body)
+    if not parser.publications:
+        raise RuntimeError("Scholar returned no publications (possibly a CAPTCHA)")
+    return parser.publications
+
+
+def extract_detail_field(body: str, field: str) -> str:
+    pattern = re.compile(
+        rf'<div class="gsc_oci_field">{re.escape(field)}</div>'
+        r'<div class="gsc_oci_value">(.*?)</div>',
+        re.DOTALL,
+    )
+    match = pattern.search(body)
+    if not match:
+        return ""
+    return clean(re.sub(r"<[^>]+>", " ", match.group(1)))
+
+
+def enrich_publication(publication: dict[str, str]) -> dict[str, str]:
+    """Best-effort lookup of full author names, venue, and canonical paper URL."""
+    try:
+        body = fetch_url(publication["scholar"], retries=2)
+    except RuntimeError as error:
+        print(f"Warning: details unavailable for {publication['title']}: {error}")
+        return publication
+
+    authors = extract_detail_field(body, "Authors")
+    venue = next(
+        (
+            value
+            for field in ("Conference", "Journal", "Book", "Publisher")
+            if (value := extract_detail_field(body, field))
+        ),
+        "",
+    )
+    title_link = re.search(
+        r'<a class="gsc_oci_title_link" href="([^"]+)"', body, re.DOTALL
+    )
+    if authors:
+        publication["authors"] = authors
+    if venue:
+        publication["venue"] = venue
+    if title_link:
+        publication["paper"] = html.unescape(title_link.group(1))
+    return publication
 
 
 def load_json(path: Path, default: object) -> object:
@@ -153,6 +220,11 @@ def main() -> int:
         action="store_true",
         help="Record current Scholar works without adding them to the website",
     )
+    parser.add_argument(
+        "--import-existing",
+        action="store_true",
+        help="Import all current Scholar works not already present on the website",
+    )
     args = parser.parse_args()
 
     scholar_publications = fetch_scholar()
@@ -169,15 +241,23 @@ def main() -> int:
 
     data = load_json(PUBLICATIONS_FILE, {"publications": []})
     existing = data["publications"]
-    unseen = [publication for publication in scholar_publications if publication["id"] not in known_ids]
+    unseen = (
+        scholar_publications
+        if args.import_existing
+        else [publication for publication in scholar_publications if publication["id"] not in known_ids]
+    )
     additions = []
     for publication in unseen:
         if any(same_title(publication["title"], item.get("title", "")) for item in existing):
             continue
+        publication = enrich_publication(publication)
         venue = publication["venue"]
         year = publication["year"]
         if year and year not in venue:
             venue = f"{venue}, {year}" if venue else year
+        links = {"scholar": publication["scholar"]}
+        if publication.get("paper"):
+            links = {"paper": publication["paper"], **links}
         additions.append(
             {
                 "title": publication["title"],
@@ -186,7 +266,7 @@ def main() -> int:
                 "thumbnail": "",
                 "selected": 0,
                 "award": "",
-                "links": {"scholar": publication["scholar"]},
+                "links": links,
             }
         )
 

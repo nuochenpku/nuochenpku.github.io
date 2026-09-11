@@ -1,6 +1,339 @@
 {
   "publications": [
     {
+      "title": "Scalable Frequency-and Length-Aware Subdocument Deduplication for Large Language Model Pretraining",
+      "authors": [
+        "Hai Wang",
+        "Chenhao Wang",
+        "Qifeng Cai",
+        "Yixiu Liu",
+        "Miao Peng",
+        "Nuo Chen",
+        "Yuanlin Tu",
+        "Chengcheng Xu",
+        "Feng Zhang"
+      ],
+      "venue": "arXiv preprint arXiv:2608.03089, 2026",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2608.03089",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:kzcSZmkxUKAC"
+      }
+    },
+    {
+      "title": "Beyond Rephrasing: Book-Level Organization Improves Synthetic Textbook Data for Mid-Training",
+      "authors": [
+        "Jiawen Tao",
+        "Miao Peng",
+        "Yaoming Li",
+        "Xiaokun Yuan",
+        "Mengzhou Wu",
+        "Wenhan Yu",
+        "Guoan Wang",
+        "Nuo Chen",
+        "Tong Yang",
+        "Maxm Pan"
+      ],
+      "venue": "arXiv preprint arXiv:2607.28109, 2026",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2607.28109",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:kF1pexMAQbMC"
+      }
+    },
+    {
+      "title": "Incentivizing in-depth reasoning over long contexts with process advantage shaping",
+      "authors": [
+        "Miao Peng",
+        "Weizhou Shen",
+        "Nuo Chen",
+        "Chenliang Li",
+        "Ming Yan",
+        "Jia Li"
+      ],
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://aclanthology.org/2026.findings-acl.1306/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:mUJArPsKIAAC"
+      }
+    },
+    {
+      "title": "FlashMemory-DeepSeek-V4: Lightning Index Ultra-Long Context via Lookahead Sparse Attention",
+      "authors": [
+        "Yan Wang",
+        "Qifan Zhang",
+        "Jiachen Yu",
+        "Tian Liang",
+        "Dongyang Ma",
+        "Xiang Hu",
+        "Zibo Lin",
+        "Chunyang Li",
+        "Zhichao Wang",
+        "Miao Peng",
+        "Nuo Chen",
+        "Jia Li",
+        "Yujiu Yang",
+        "Haitao Mi",
+        "Dong Yu"
+      ],
+      "venue": "arXiv preprint arXiv:2606.09079, 2026",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2606.09079",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:ziOE8S1-AIUC"
+      }
+    },
+    {
+      "title": "Mitigating the safety alignment tax with null-space constrained policy optimization",
+      "authors": [
+        "Yifan Niu",
+        "Han Xiao",
+        "Dongyi Liu",
+        "Nuo Chen",
+        "Jia Li"
+      ],
+      "venue": "International Conference on Learning Representations, 2026",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/e664650506f1cf2b4696df892147c06e-Abstract-Conference.html",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:YsrPvlHIBpEC"
+      }
+    },
+    {
+      "title": "Looprpt: Reinforcement pre-training for looped language models",
+      "authors": [
+        "Guo Tang",
+        "Shixin Jiang",
+        "Heng Chang",
+        "Nuo Chen",
+        "Yuhan Li",
+        "Huiming Fan",
+        "Jia Li",
+        "Ming Liu",
+        "Bing Qin"
+      ],
+      "venue": "arXiv preprint arXiv:2603.19714, 2026",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2603.19714",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:raTqNPD5sRQC"
+      }
+    },
+    {
+      "title": "Teaching LLM to Reason: Reinforcement Learning from Algorithmic Problems without Code",
+      "authors": [
+        "Keqin Bao",
+        "Nuo Chen",
+        "Xiaoyuan Li",
+        "Binyuan Hui",
+        "Bowen Yu",
+        "Fuli Feng",
+        "Xiangnan He",
+        "Dayiheng Liu"
+      ],
+      "venue": "arXiv preprint arXiv:2507.07498, 2025",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2507.07498",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:kWvqk_afx_IC"
+      }
+    },
+    {
+      "title": "Reledit: Evaluating conceptual knowledge editing in language models via relational reasoning",
+      "authors": [
+        "Yifan Niu",
+        "Miao Peng",
+        "Nuo Chen",
+        "Yatao Bian",
+        "Tingyang Xu",
+        "Jia Li"
+      ],
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://aclanthology.org/2025.findings-acl.533/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:uVUOdF_882EC"
+      }
+    },
+    {
+      "title": "Revisiting lora through the lens of parameter redundancy: Spectral encoding helps",
+      "authors": [
+        "Jiashun Cheng",
+        "Aochuan Chen",
+        "Nuo Chen",
+        "Ziqi Gao",
+        "Yuhan Li",
+        "Jia Li",
+        "Fugee Tsung"
+      ],
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://aclanthology.org/2025.findings-acl.139/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:O0nohqN1r9EC"
+      }
+    },
+    {
+      "title": "How does Misinformation Affect Large Language Model Behaviors and Preferences?",
+      "authors": [
+        "Miao Peng",
+        "Nuo Chen",
+        "Jianheng Tang",
+        "Jia Li"
+      ],
+      "venue": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 2025",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://aclanthology.org/2025.acl-long.674/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:1DsIQWDZLl8C"
+      }
+    },
+    {
+      "title": "Grapharena: Evaluating and exploring large language models on graph computation",
+      "authors": [
+        "Jianheng Tang",
+        "Qifan Zhang",
+        "Yuhan Li",
+        "Nuo Chen",
+        "Jia Li"
+      ],
+      "venue": "International Conference on Learning Representations, 2025",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/77fa8253adfc8b33209639f3e9985741-Abstract-Conference.html",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:HhcuHIWmDEUC"
+      }
+    },
+    {
+      "title": "Gcoder: Improving large language model for generalized graph problem solving",
+      "authors": [
+        "Qifan Zhang",
+        "Xiaobin Hong",
+        "Jianheng Tang",
+        "Nuo Chen",
+        "Yuhan Li",
+        "Wenzhong Li",
+        "Jing Tang",
+        "Jia Li"
+      ],
+      "venue": "arXiv preprint arXiv:2410.19084, 2024",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2410.19084",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:jFemdcug13IC"
+      }
+    },
+    {
+      "title": "Qwen2.5: A Party of Foundation Models",
+      "authors": [
+        "Qwen Team"
+      ],
+      "venue": "Qwen Blog, 2024",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://qwenlm.github.io/blog/qwen2.5/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:w0F2JDEymm0C"
+      }
+    },
+    {
+      "title": "From good to great: Improving math reasoning with tool-augmented interleaf prompting",
+      "authors": [
+        "Nuo Chen",
+        "Hongguang Li",
+        "Baoyuan Wang",
+        "Jia Li"
+      ],
+      "venue": "Proceedings of the 2nd Workshop on Natural Language Reasoning and Structured Explanations (@ ACL 2024)",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://aclanthology.org/2024.nlrse-1.7/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:-mN3Mh-tlDkC"
+      }
+    },
+    {
+      "title": "Improving retrieval-based dialogue system via syntax-informed attention",
+      "authors": [
+        "Tengtao Song",
+        "Nuo Chen",
+        "Ji Jiang",
+        "Zhihong Zhu",
+        "Yuexian Zou"
+      ],
+      "venue": "ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://ieeexplore.ieee.org/abstract/document/10095548/",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:1lhNe0rCu4AC"
+      }
+    },
+    {
+      "title": "Bridge the gap between language models and tabular understanding",
+      "authors": [
+        "Nuo Chen",
+        "Linjun Shou",
+        "Ming Gong",
+        "Jian Pei",
+        "Chenyu You",
+        "Jianhui Chang",
+        "Daxin Jiang",
+        "Jia Li"
+      ],
+      "venue": "arXiv preprint arXiv:2302.09302, 2023",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2302.09302",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:QD3KBmkZPeQC"
+      }
+    },
+    {
+      "title": "Exploring and Exploiting Multi-Granularity Representations for Machine Reading Comprehension",
+      "authors": [
+        "Nuo Chen",
+        "Chenyu You"
+      ],
+      "venue": "arXiv preprint arXiv:2208.08750, 2022",
+      "thumbnail": "",
+      "selected": 0,
+      "award": "",
+      "links": {
+        "paper": "https://arxiv.org/abs/2208.08750",
+        "scholar": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=qFS5KY0AAAAJ&pagesize=100&sortby=pubdate&citation_for_view=qFS5KY0AAAAJ:NDuN12AVoxsC"
+      }
+    },
+    {
       "title": "Qwen3 Technical Report",
       "authors": [
         "Qwen Team"

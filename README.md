@@ -19,7 +19,9 @@ The `Update publications from Google Scholar` workflow runs every Monday and can
 also be started manually from the repository's **Actions** tab. It compares the
 profile against `.scholar/publication_ids.json`; newly discovered works are
 prepended to `publications.json` while existing hand-curated entries are left
-unchanged. New entries are unselected by default and link to their Scholar page.
+unchanged. The initial import added Scholar works that were missing from the
+website. New entries are unselected by default and include paper and Scholar
+links whenever Scholar provides them.
 
 Google Scholar does not provide an official public profile API and may
 occasionally block automated requests. In that case the workflow fails without
