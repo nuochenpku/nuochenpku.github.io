@@ -89,12 +89,13 @@ function createPublicationElement(publication) {
   // Create thumbnail
   const thumbnail = document.createElement('div');
   thumbnail.className = 'pub-thumbnail';
-  thumbnail.onclick = () => openModal(publication.thumbnail);
-  
-  const thumbnailImg = document.createElement('img');
-  thumbnailImg.src = publication.thumbnail;
-  thumbnailImg.alt = `${publication.title} thumbnail`;
-  thumbnail.appendChild(thumbnailImg);
+  if (publication.thumbnail) {
+    thumbnail.onclick = () => openModal(publication.thumbnail);
+    const thumbnailImg = document.createElement('img');
+    thumbnailImg.src = publication.thumbnail;
+    thumbnailImg.alt = `${publication.title} thumbnail`;
+    thumbnail.appendChild(thumbnailImg);
+  }
   
   // Create content container
   const content = document.createElement('div');
@@ -170,6 +171,13 @@ function createPublicationElement(publication) {
       projectLink.href = publication.links.project;
       projectLink.textContent = '[Project Page]';
       links.appendChild(projectLink);
+    }
+
+    if (publication.links.scholar) {
+      const scholarLink = document.createElement('a');
+      scholarLink.href = publication.links.scholar;
+      scholarLink.textContent = '[Google Scholar]';
+      links.appendChild(scholarLink);
     }
     
     content.appendChild(links);

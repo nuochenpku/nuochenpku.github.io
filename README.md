@@ -11,6 +11,19 @@ A clean, minimal academic website template, designed for researchers and PhD stu
 - Easy to customize
 - SEO-friendly meta tags
 - Publication showcase support
+- Weekly Google Scholar publication sync
+
+## Automatic Google Scholar updates
+
+The `Update publications from Google Scholar` workflow runs every Monday and can
+also be started manually from the repository's **Actions** tab. It compares the
+profile against `.scholar/publication_ids.json`; newly discovered works are
+prepended to `publications.json` while existing hand-curated entries are left
+unchanged. New entries are unselected by default and link to their Scholar page.
+
+Google Scholar does not provide an official public profile API and may
+occasionally block automated requests. In that case the workflow fails without
+changing the publication data and retries at the next scheduled run.
 
 ## Quick Start
 

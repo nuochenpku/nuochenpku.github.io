@@ -1,0 +1,42 @@
+name: Update publications from Google Scholar
+
+on:
+  schedule:
+    # GitHub schedules use UTC. This is 09:17 every Monday in Asia/Shanghai.
+    - cron: "17 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-google-scholar-publications
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch new Scholar publications
+        run: python scripts/update_publications.py
+
+      - name: Commit changes when needed
+        run: |
+          if git diff --quiet; then
+            echo "No publication changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publications.json .scholar/publication_ids.json
+          git commit -m "Update publications from Google Scholar"
+          git push
