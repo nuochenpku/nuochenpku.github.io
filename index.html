@@ -6,7 +6,7 @@
     <meta name="description" content="Nuo Chen is a principal researcher at Tencent working on LLM mid-training, synthetic data, long-context training, and reasoning.">
     <meta name="keywords" content="Nuo Chen, Large Language Models, Synthetic Data, Mid-training, Long-context Training, Reasoning, NLP">
     <meta name="author" content="Nuo Chen">
-    <meta name="theme-color" content="#4a74b9">
+    <meta name="theme-color" content="#315c8d">
     <meta property="og:title" content="Nuo Chen | LLM Researcher at Tencent">
     <meta property="og:description" content="Research on LLM mid-training, synthetic data, long-context training, and reasoning.">
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
     <title>Nuo Chen | LLM Researcher at Tencent</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script type="application/ld+json">
@@ -51,72 +51,54 @@
 </head>
 <body id="top">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header>
-        <div class="header-content">
+    <header class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Principal Researcher · Tencent</p>
             <h1>Nuo Chen</h1>
-            <p class="tagline">Principal Researcher • HY Foundation Model Team, Tencent</p>
+            <p class="tagline">Building stronger foundation models through mid-training, synthetic data, and reasoning.</p>
+            <div class="research-tags" aria-label="Research interests">
+                <span>LLM Mid-training</span>
+                <span>Synthetic Data</span>
+                <span>Reasoning</span>
+            </div>
             <nav class="social-links-header" aria-label="Profile links">
-                <a href="https://scholar.google.com/citations?user=qFS5KY0AAAAJ&hl=en" rel="me"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a>
-                <a href="https://x.com/nuochenpku" rel="me"><i class="fab fa-twitter" aria-hidden="true"></i>Twitter</a>
-                <a href="https://github.com/nuochenpku" rel="me"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
-                <a href="mailto:chennuo26@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+                <a class="profile-link profile-link-primary" href="https://scholar.google.com/citations?user=qFS5KY0AAAAJ&hl=en" rel="me"><i class="fas fa-graduation-cap" aria-hidden="true"></i>Google Scholar</a>
+                <a class="profile-link profile-link-secondary" href="mailto:chennuo26@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>Email</a>
+                <a class="profile-link profile-link-quiet" href="https://github.com/nuochenpku" rel="me"><i class="fab fa-github" aria-hidden="true"></i>GitHub</a>
+                <a class="profile-link profile-link-quiet" href="https://x.com/nuochenpku" rel="me"><i class="fab fa-twitter" aria-hidden="true"></i>Twitter</a>
             </nav>
+            <div class="impact-strip" aria-label="Research highlights">
+                <div><strong>40+</strong><span>Publications</span></div>
+                <div><strong>20+</strong><span>First / co-first</span></div>
+                <div><strong>2024</strong><span>Baidu Scholarship</span></div>
+            </div>
         </div>
-        <div class="header-image">
-            <img src="images/cn.jpg" alt="Portrait of Nuo Chen" width="250" height="250" decoding="async">
+        <div class="hero-portrait">
+            <div class="portrait-frame">
+                <img src="images/cn.jpg" alt="Portrait of Nuo Chen" width="440" height="520" decoding="async">
+            </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section id="about">
-            <p>I am currently a principal researcher on the <strong>HY Foundation Model Team at Tencent</strong>, where I lead mid-training efforts for the HY model series, including CT, CPT, and long-context training. I have published more than 40 papers at leading conferences, including more than <strong>20 as first or co-first author</strong>. My research focuses on how synthetic data can be used effectively to scale the capabilities of large language models.</p>
-            <p>Previously, I contributed to the <strong>Qwen2.5 and Qwen3</strong> model series. <a href="https://github.com/Graph-Reasoner">Graph-Reasoner</a> is a collection of projects on graph reasoning; please feel free to explore our work.</p>
-        </section>
-
-        <section id="research">
-            <h2>Research &amp; Hiring</h2>
-            <p>We are looking for full-time researchers and self-motivated interns with strong hands-on skills and an interest in LLM training, data-centric AI, and large-scale experimentation.</p>
-            <p>Our current research interests include:</p>
-            <ul>
-                <li><strong>Improving the quality and diversity of synthetic data.</strong></li>
-                <li><strong>Understanding the optimal mix of synthetic and real data.</strong></li>
-                <li><strong>Developing effective scaling strategies for synthetic data.</strong></li>
-                <li><strong>Exploring when and to what extent synthetic data can replace real data.</strong></li>
-            </ul>
-            <p>If you are interested in data scaling laws, synthetic data generation, or mid-training strategies for LLMs, please feel free to contact me by email.</p>
-        </section>
-
-        <section id="news">
-            <h2>News</h2>
-            <div class="news-container" id="news-container">
-                <ul class="news-list">
-                    <li>[04/2026] 🎉 Two papers were accepted to ICML 2026 and ACL 2026.</li>
-                    <li>[12/2025] 🎉 Two papers were accepted to ICLR 2026.</li>
-                    <li>[09/2025] 🎉 One paper was accepted to NeurIPS 2025.</li>
-                    <li>[07/2025] I presented a tutorial on role-playing at IJCAI 2025.</li>
-                    <li>[05/2025] 🎉 One paper was accepted to COLM 2025.</li>
-                    <li>[05/2025] 🎉 One paper was accepted to KDD 2025, and three papers were accepted to ACL 2025.</li>
-                    <li>[02/2025] 🎉 I received the <span class="award-emphasis">2024 Baidu Scholarship</span>.</li>
-                    <li>[11/2024] 🎉 One paper was accepted to COLING 2025 as an <span class="award-emphasis">oral presentation</span>.</li>
-                    <li>[09/2024] 🎉 Two papers were accepted to EMNLP 2024.</li>
-                    <li>[07/2024] I interned with the Qwen Foundation Model Team, focusing on pre-training methods for improving LLM reasoning.</li>
-                    <li>[07/2024] We released our survey on role-playing with language models: <a href="https://arxiv.org/abs/2407.11484"><strong>The Oscars of AI Theater</strong></a>.</li>
-                    <li>[05/2024] Served as a reviewer for EMNLP 2024.</li>
-                    <li>[05/2024] 🎉 One paper was accepted to KDD 2024.</li>
-                    <li>[02/2024] We released two papers on arXiv: <a href="https://github.com/nuochenpku/COMEDY"><strong>COMEDY</strong></a> and <a href="https://graph-wiz.github.io/"><strong>GraphWiz</strong></a>.</li>
-                    <li>[12/2023] We released two papers on arXiv: <a href="https://mathoctopus.github.io/"><strong>MathOctopus</strong></a> and <a href="https://github.com/nuochenpku/LLaMA_Analysis"><strong>LLaMA-Probing</strong></a>.</li>
-                    <li>[12/2023] Served as a reviewer for NAACL 2024 and ACL 2024.</li>
-                    <li>[10/2023] 🎉 Three papers were accepted to EMNLP 2023.</li>
-                    <li>[09/2023] Served as a reviewer for IEEE TPAMI.</li>
-                    <li>[05/2023] 🎉 Two papers were accepted to ACL 2023.</li>
-                </ul>
+        <section id="about" class="about-section" aria-labelledby="about-title">
+            <div class="section-heading">
+                <p class="section-kicker">About</p>
+                <h2 id="about-title">Building better language models through better data.</h2>
             </div>
-            <button id="toggle-news" class="text-button" type="button" aria-expanded="false" aria-controls="news-container" hidden>Show Earlier News</button>
+            <div class="section-copy">
+                <p>I am currently a principal researcher on the <strong>HY Foundation Model Team at Tencent</strong>, where I lead mid-training efforts for the HY model series, including CT, CPT, and long-context training. I have published more than 40 papers at leading conferences, including more than <strong>20 papers as first or co-first author</strong>. My research focuses on how synthetic data can be used effectively to scale the capabilities of large language models.</p>
+                <p>Previously, I contributed to the <strong>Qwen2.5 and Qwen3</strong> model series. <a href="https://github.com/Graph-Reasoner">Graph-Reasoner</a> is a collection of projects on graph reasoning; please feel free to explore our work.</p>
+            </div>
         </section>
 
         <section id="publications" aria-labelledby="publications-title">
             <div class="publications-header">
-                <h2 id="publications-title">Publications</h2>
+                <div class="section-heading">
+                    <p class="section-kicker">Research output</p>
+                    <h2 id="publications-title">Publications</h2>
+                    <p class="section-description">Selected work and a complete list synchronized with Google Scholar.</p>
+                </div>
                 <div class="publication-views" role="group" aria-label="Choose publication view">
                     <button type="button" data-publication-view="recent" aria-pressed="true" aria-controls="publications-container">Recent</button>
                     <button type="button" data-publication-view="selected" aria-pressed="false" aria-controls="publications-container">Selected</button>
@@ -130,11 +112,62 @@
             </div>
         </section>
 
-        <section id="awards">
-            <h2>Awards</h2>
+        <section id="research" class="hiring-panel" aria-labelledby="hiring-title">
+            <div class="hiring-copy">
+                <p class="section-kicker">Collaborate</p>
+                <h2 id="hiring-title">Research &amp; Hiring</h2>
+                <p>We are looking for full-time researchers and self-motivated interns with strong hands-on skills and an interest in LLM training, data-centric AI, and large-scale experimentation.</p>
+                <p>If you are interested in data scaling laws, synthetic data generation, or mid-training strategies for LLMs, please get in touch.</p>
+                <a class="inline-cta" href="mailto:chennuo26@gmail.com">Start a conversation <span aria-hidden="true">→</span></a>
+            </div>
+            <ul class="focus-grid" aria-label="Current research interests">
+                <li><span>01</span><strong>Data quality</strong><p>Improving the quality and diversity of synthetic data.</p></li>
+                <li><span>02</span><strong>Data mixtures</strong><p>Understanding the optimal mix of synthetic and real data.</p></li>
+                <li><span>03</span><strong>Scaling strategies</strong><p>Developing effective scaling strategies for synthetic data.</p></li>
+                <li><span>04</span><strong>Data substitution</strong><p>Exploring when synthetic data can replace real data.</p></li>
+            </ul>
+        </section>
+
+        <section id="news" aria-labelledby="news-title">
+            <div class="section-heading compact-heading">
+                <p class="section-kicker">Updates</p>
+                <h2 id="news-title">News</h2>
+            </div>
+            <div class="news-container" id="news-container">
+                <ul class="news-list">
+                    <li><time datetime="2026-04">2026.04</time><div>Two papers were accepted to ICML 2026 and ACL 2026.</div></li>
+                    <li><time datetime="2025-12">2025.12</time><div>Two papers were accepted to ICLR 2026.</div></li>
+                    <li><time datetime="2025-09">2025.09</time><div>One paper was accepted to NeurIPS 2025.</div></li>
+                    <li><time datetime="2025-07">2025.07</time><div>I presented a tutorial on role-playing at IJCAI 2025.</div></li>
+                    <li><time datetime="2025-05">2025.05</time><div>One paper was accepted to COLM 2025.</div></li>
+                    <li><time datetime="2025-05">2025.05</time><div>One paper was accepted to KDD 2025, and three papers were accepted to ACL 2025.</div></li>
+                    <li><time datetime="2025-02">2025.02</time><div>I received the <span class="award-emphasis">2024 Baidu Scholarship</span>.</div></li>
+                    <li><time datetime="2024-11">2024.11</time><div>One paper was accepted to COLING 2025 as an <span class="award-emphasis">oral presentation</span>.</div></li>
+                    <li><time datetime="2024-09">2024.09</time><div>Two papers were accepted to EMNLP 2024.</div></li>
+                    <li><time datetime="2024-07">2024.07</time><div>I interned with the Qwen Foundation Model Team, focusing on pre-training methods for improving LLM reasoning.</div></li>
+                    <li><time datetime="2024-07">2024.07</time><div>We released our survey on role-playing with language models: <a href="https://arxiv.org/abs/2407.11484">The Oscars of AI Theater</a>.</div></li>
+                    <li><time datetime="2024-05">2024.05</time><div>Served as a reviewer for EMNLP 2024.</div></li>
+                    <li><time datetime="2024-05">2024.05</time><div>One paper was accepted to KDD 2024.</div></li>
+                    <li><time datetime="2024-02">2024.02</time><div>We released two papers on arXiv: <a href="https://github.com/nuochenpku/COMEDY">COMEDY</a> and <a href="https://graph-wiz.github.io/">GraphWiz</a>.</div></li>
+                    <li><time datetime="2023-12">2023.12</time><div>We released two papers on arXiv: <a href="https://mathoctopus.github.io/">MathOctopus</a> and <a href="https://github.com/nuochenpku/LLaMA_Analysis">LLaMA-Probing</a>.</div></li>
+                    <li><time datetime="2023-12">2023.12</time><div>Served as a reviewer for NAACL 2024 and ACL 2024.</div></li>
+                    <li><time datetime="2023-10">2023.10</time><div>Three papers were accepted to EMNLP 2023.</div></li>
+                    <li><time datetime="2023-09">2023.09</time><div>Served as a reviewer for IEEE TPAMI.</div></li>
+                    <li><time datetime="2023-05">2023.05</time><div>Two papers were accepted to ACL 2023.</div></li>
+                </ul>
+            </div>
+            <button id="toggle-news" class="text-button" type="button" aria-expanded="false" aria-controls="news-container" hidden>Show Earlier News</button>
+        </section>
+
+        <section id="awards" aria-labelledby="awards-title">
+            <div class="section-heading compact-heading">
+                <p class="section-kicker">Recognition</p>
+                <h2 id="awards-title">Awards</h2>
+            </div>
+            <div class="award-list">
             <div class="award-item">
                 <span class="award-year">2024</span>
-                <div class="award-desc"><strong>百度奖学金</strong>（Baidu Scholarship）</div>
+                <div class="award-desc"><strong>Baidu Scholarship</strong><span class="translation" lang="zh-CN">百度奖学金</span></div>
             </div>
             <div class="award-item">
                 <span class="award-year">2023</span>
@@ -146,11 +179,11 @@
             </div>
             <div class="award-item">
                 <span class="award-year">2022</span>
-                <div class="award-desc"><strong>北京大学优秀毕业生</strong>（Outstanding Graduate of Peking University）</div>
+                <div class="award-desc"><strong>Outstanding Graduate of Peking University</strong><span class="translation" lang="zh-CN">北京大学优秀毕业生</span></div>
             </div>
             <div class="award-item">
                 <span class="award-year">2022</span>
-                <div class="award-desc"><strong>北京市优秀毕业生</strong>（Outstanding Graduate of Beijing）</div>
+                <div class="award-desc"><strong>Outstanding Graduate of Beijing</strong><span class="translation" lang="zh-CN">北京市优秀毕业生</span></div>
             </div>
             <div class="award-item">
                 <span class="award-year">2022</span>
@@ -168,34 +201,37 @@
                 <span class="award-year">2021</span>
                 <div class="award-desc">Merit Student, Peking University</div>
             </div>
+            </div>
         </section>
 
-        <section id="services">
-            <h2>Academic Service</h2>
-            <div class="paper-box-text">
+        <div class="details-grid">
+            <section id="services" class="detail-card" aria-labelledby="services-title">
+                <p class="section-kicker">Community</p>
+                <h2 id="services-title">Academic Service</h2>
                 <ul>
                     <li>Invited talk at Shanghai University of Engineering Science.</li>
                     <li>Reviewer for ACM MM, ACL, EMNLP, AAAI, NeurIPS, NAACL, ICLR, IEEE TPAMI, and COLM.</li>
                 </ul>
-            </div>
-        </section>
+            </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="paper-box-text">
-                <ul>
-                    <li><i>Sep 2022–Present</i>, Ph.D. Candidate, DSA, HKUST.</li>
-                    <li><i>Sep 2019–Jun 2022</i>, Master’s degree in Computer Science, Peking University.</li>
-                    <li><i>Sep 2015–Jun 2019</i>, Bachelor’s degree, Beijing University of Posts and Telecommunications.</li>
+            <section id="education" class="detail-card" aria-labelledby="education-title">
+                <p class="section-kicker">Background</p>
+                <h2 id="education-title">Education</h2>
+                <ul class="education-list">
+                    <li><span class="education-date">2022–Present</span><span>Ph.D. Candidate, DSA, HKUST</span></li>
+                    <li><span class="education-date">2019–2022</span><span>Master’s degree in Computer Science, Peking University</span></li>
+                    <li><span class="education-date">2015–2019</span><span>Bachelor’s degree, Beijing University of Posts and Telecommunications</span></li>
                 </ul>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="misc-item">
-                <p>I welcome research collaborations and inquiries from prospective researchers and interns. Please feel free to contact me at <a href="mailto:chennuo26@gmail.com">chennuo26@gmail.com</a>.</p>
+        <section id="contact" class="contact-panel" aria-labelledby="contact-title">
+            <div>
+                <p class="section-kicker">Get in touch</p>
+                <h2 id="contact-title">Let’s explore ideas together.</h2>
+                <p>I welcome research collaborations and inquiries from prospective researchers and interns.</p>
             </div>
+            <a class="contact-button" href="mailto:chennuo26@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> chennuo26@gmail.com</a>
         </section>
     </main>
 

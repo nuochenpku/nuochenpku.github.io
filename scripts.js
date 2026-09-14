@@ -9,7 +9,7 @@ const LINK_LABELS = {
   demo: 'Demo',
   poster: 'Poster',
   zhihu: 'Zhihu',
-  scholar: 'Google Scholar'
+  scholar: 'Scholar'
 };
 
 let allPublications = [];
@@ -17,19 +17,12 @@ let activePublicationView = 'recent';
 let modalTrigger = null;
 
 document.addEventListener('DOMContentLoaded', () => {
-  initializeSections();
   initializePublicationViews();
   initializeNews();
   initializeModal();
   document.getElementById('current-year').textContent = new Date().getFullYear();
   loadPublications();
 });
-
-function initializeSections() {
-  document.querySelectorAll('section').forEach((section, index) => {
-    section.style.animationDelay = `${index * 0.08}s`;
-  });
-}
 
 function initializePublicationViews() {
   document.querySelectorAll('[data-publication-view]').forEach(button => {
@@ -138,6 +131,8 @@ function renderPublications() {
   const fragment = document.createDocumentFragment();
   let previousYear = null;
 
+  container.dataset.view = activePublicationView;
+
   document.querySelectorAll('[data-publication-view]').forEach(button => {
     button.setAttribute(
       'aria-pressed',
@@ -190,6 +185,7 @@ function createPublicationElement(publication, showThumbnail) {
     const thumbnail = document.createElement('button');
     thumbnail.className = 'pub-thumbnail';
     thumbnail.type = 'button';
+    thumbnail.style.setProperty('--thumbnail-image', `url("${publication.thumbnail}")`);
     thumbnail.setAttribute('aria-label', `View image for ${publication.title}`);
     thumbnail.addEventListener('click', () => openModal(publication, thumbnail));
 
@@ -207,7 +203,7 @@ function createPublicationElement(publication, showThumbnail) {
   const content = document.createElement('div');
   content.className = 'pub-content';
 
-  const title = document.createElement('h3');
+  const title = document.createElement(activePublicationView === 'all' ? 'h4' : 'h3');
   title.className = 'pub-title';
   title.textContent = publication.title;
   content.appendChild(title);
@@ -261,7 +257,7 @@ function createPublicationLinks(publication) {
     }
     const link = document.createElement('a');
     link.href = url;
-    link.textContent = `[${label}]`;
+    link.textContent = label;
     link.setAttribute('aria-label', `${label} for ${publication.title}`);
     container.appendChild(link);
   });
