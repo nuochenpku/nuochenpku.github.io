@@ -301,10 +301,33 @@ section {
 }
 
 .about-section {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(250px, 0.72fr) minmax(0, 1.38fr);
   gap: clamp(2.5rem, 7vw, 5.5rem);
   align-items: start;
+  padding: clamp(2.25rem, 5vw, 3.25rem);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 250, 0.82));
+  box-shadow: 0 12px 42px rgba(23, 33, 43, 0.045);
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: clamp(2.25rem, 5vw, 3.25rem);
+  width: 88px;
+  height: 3px;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, var(--accent), #8aa8c3);
+}
+
+.about-section .section-copy {
+  padding-left: clamp(1.75rem, 4vw, 3rem);
+  border-left: 1px solid var(--border-strong);
 }
 
 .section-heading h2 {
@@ -1093,6 +1116,18 @@ strong {
 
   .about-section {
     gap: 1.5rem;
+    padding: 1.55rem;
+    border-radius: 20px;
+  }
+
+  .about-section::before {
+    left: 1.55rem;
+  }
+
+  .about-section .section-copy {
+    padding: 1.35rem 0 0;
+    border-top: 1px solid var(--border);
+    border-left: 0;
   }
 
   .section-copy {

@@ -92,26 +92,6 @@
             </div>
         </section>
 
-        <section id="publications" aria-labelledby="publications-title">
-            <div class="publications-header">
-                <div class="section-heading">
-                    <p class="section-kicker">Research output</p>
-                    <h2 id="publications-title">Publications</h2>
-                    <p class="section-description">Selected work and a complete list synchronized with Google Scholar.</p>
-                </div>
-                <div class="publication-views" role="group" aria-label="Choose publication view">
-                    <button type="button" data-publication-view="recent" aria-pressed="true" aria-controls="publications-container">Recent</button>
-                    <button type="button" data-publication-view="selected" aria-pressed="false" aria-controls="publications-container">Selected</button>
-                    <button type="button" data-publication-view="all" aria-pressed="false" aria-controls="publications-container">All</button>
-                </div>
-            </div>
-            <p id="publication-status" class="sr-only" aria-live="polite"></p>
-            <div id="publications-container" aria-busy="true">
-                <!-- Publications will be dynamically loaded here -->
-                <noscript><p>JavaScript is required for the publication filters. You can browse the complete list on <a href="https://scholar.google.com/citations?user=qFS5KY0AAAAJ&hl=en">Google Scholar</a>.</p></noscript>
-            </div>
-        </section>
-
         <section id="research" class="hiring-panel" aria-labelledby="hiring-title">
             <div class="hiring-copy">
                 <p class="section-kicker">Collaborate</p>
@@ -157,6 +137,26 @@
                 </ul>
             </div>
             <button id="toggle-news" class="text-button" type="button" aria-expanded="false" aria-controls="news-container" hidden>Show Earlier News</button>
+        </section>
+
+        <section id="publications" aria-labelledby="publications-title">
+            <div class="publications-header">
+                <div class="section-heading">
+                    <p class="section-kicker">Research output</p>
+                    <h2 id="publications-title">Publications</h2>
+                    <p class="section-description">Selected work and a complete list synchronized with Google Scholar.</p>
+                </div>
+                <div class="publication-views" role="group" aria-label="Choose publication view">
+                    <button type="button" data-publication-view="recent" aria-pressed="true" aria-controls="publications-container">Recent</button>
+                    <button type="button" data-publication-view="selected" aria-pressed="false" aria-controls="publications-container">Selected</button>
+                    <button type="button" data-publication-view="all" aria-pressed="false" aria-controls="publications-container">All</button>
+                </div>
+            </div>
+            <p id="publication-status" class="sr-only" aria-live="polite"></p>
+            <div id="publications-container" aria-busy="true">
+                <!-- Publications will be dynamically loaded here -->
+                <noscript><p>JavaScript is required for the publication filters. You can browse the complete list on <a href="https://scholar.google.com/citations?user=qFS5KY0AAAAJ&hl=en">Google Scholar</a>.</p></noscript>
+            </div>
         </section>
 
         <section id="awards" aria-labelledby="awards-title">
