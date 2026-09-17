@@ -884,6 +884,39 @@ footer {
   text-align: center;
 }
 
+.visitor-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin: 0.55rem auto 0;
+  padding: 0.38rem 0.72rem;
+  border: 1px solid rgba(205, 214, 223, 0.9);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.visitor-counter[hidden] {
+  display: none;
+}
+
+.visitor-counter strong {
+  margin-left: 0.12rem;
+  color: var(--accent-deep);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.visitor-divider {
+  color: var(--border-strong);
+}
+
 /* Generic text and links */
 a {
   color: var(--accent);

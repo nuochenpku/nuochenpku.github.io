@@ -1,5 +1,6 @@
 const RECENT_PUBLICATION_LIMIT = 8;
 const CURRENT_AUTHOR = 'nuo chen';
+const VISITOR_COUNTER_ENDPOINT = 'https://cdn.busuanzi.cc/api.php';
 const LINK_LABELS = {
   pdf: 'PDF',
   paper: 'Paper',
@@ -20,9 +21,60 @@ document.addEventListener('DOMContentLoaded', () => {
   initializePublicationViews();
   initializeNews();
   initializeModal();
+  initializeVisitorCounter();
   document.getElementById('current-year').textContent = new Date().getFullYear();
   loadPublications();
 });
+
+async function initializeVisitorCounter() {
+  const counter = document.getElementById('visitor-counter');
+  const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  if (!counter || !['http:', 'https:'].includes(window.location.protocol) || isLocalPreview) {
+    return;
+  }
+
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 5000);
+
+  try {
+    const response = await fetch(VISITOR_COUNTER_ENDPOINT, {
+      method: 'POST',
+      body: JSON.stringify({
+        url: `${window.location.origin}${window.location.pathname}`,
+        referrer: ''
+      }),
+      cache: 'no-store',
+      credentials: 'omit',
+      referrerPolicy: 'no-referrer',
+      signal: controller.signal
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    const visitors = normalizedCounterValue(data.busuanzi_site_uv);
+    const views = normalizedCounterValue(data.busuanzi_site_pv);
+    if (visitors === null || views === null) {
+      throw new Error('Invalid visitor counter response');
+    }
+
+    const numberFormat = new Intl.NumberFormat('en-US');
+    document.getElementById('visitor-count').textContent = numberFormat.format(visitors);
+    document.getElementById('view-count').textContent = numberFormat.format(views);
+    counter.hidden = false;
+  } catch (error) {
+    console.warn('Visitor counter could not be loaded:', error);
+  } finally {
+    window.clearTimeout(timeout);
+  }
+}
+
+function normalizedCounterValue(value) {
+  const count = typeof value === 'number' ? value : Number.parseInt(value, 10);
+  return Number.isFinite(count) && count >= 0 ? count : null;
+}
 
 function initializePublicationViews() {
   document.querySelectorAll('[data-publication-view]').forEach(button => {
