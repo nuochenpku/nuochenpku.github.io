@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261015-counter">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -237,10 +237,14 @@
 
     <footer>
         <p>© <span id="current-year">2026</span> Nuo Chen. Publications are synchronized with Google Scholar.</p>
-        <p class="visitor-counter" id="visitor-counter" aria-live="polite" hidden>
+        <p class="visitor-counter" id="visitor-counter" aria-live="polite">
             <span>Visitors <strong id="visitor-count">—</strong></span>
             <span class="visitor-divider" aria-hidden="true">·</span>
             <span>Views <strong id="view-count">—</strong></span>
+        </p>
+        <p class="visitor-counter-feedback">
+            <span id="visitor-counter-status" role="status">Statistics unavailable.</span>
+            <button id="visitor-counter-retry" type="button" hidden>Retry</button>
         </p>
     </footer>
 
@@ -248,6 +252,6 @@
         <button class="modal-close" id="modal-close" type="button" aria-label="Close image preview">&times;</button>
         <img class="modal-content" id="modalImage" alt="">
     </div>
-    <script src="scripts.js"></script>
+    <script src="scripts.js?v=20261015-counter"></script>
 </body>
 </html>

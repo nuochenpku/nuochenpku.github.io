@@ -918,6 +918,28 @@ footer {
   color: var(--border-strong);
 }
 
+.visitor-counter-feedback {
+  min-height: 1.4em;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+}
+
+#visitor-counter-retry {
+  margin-left: 0.4rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent-deep);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#visitor-counter-retry:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
 /* Generic text and links */
 a {
   color: var(--accent);
