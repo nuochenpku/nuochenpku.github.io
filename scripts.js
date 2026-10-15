@@ -1,6 +1,6 @@
 const RECENT_PUBLICATION_LIMIT = 8;
 const CURRENT_AUTHOR = 'nuo chen';
-const VISITOR_COUNTER_ENDPOINT = 'https://cdn.busuanzi.cc/api.php';
+const VISITOR_COUNTER_ENDPOINT = 'https://counterapi.com/api/nuochenpku.github.io/view/homepage';
 const LINK_LABELS = {
   pdf: 'PDF',
   paper: 'Paper',
@@ -33,16 +33,36 @@ async function initializeVisitorCounter() {
     return;
   }
 
+  try {
+    const numberFormat = new Intl.NumberFormat('en-US');
+    const views = await fetchCounterValue(VISITOR_COUNTER_ENDPOINT);
+    if (views === null) {
+      throw new Error('Invalid page view response');
+    }
+
+    document.getElementById('view-count').textContent = numberFormat.format(views);
+    counter.hidden = false;
+
+    try {
+      const visitors = await fetchCounterValue(`${VISITOR_COUNTER_ENDPOINT}?readOnly=true&unique=true`);
+      if (visitors !== null) {
+        document.getElementById('visitor-count').textContent = numberFormat.format(visitors);
+      }
+    } catch (error) {
+      console.warn('Unique visitor count could not be loaded:', error);
+    }
+  } catch (error) {
+    console.warn('Visitor counter could not be loaded:', error);
+  }
+}
+
+async function fetchCounterValue(url) {
   const controller = new AbortController();
   const timeout = window.setTimeout(() => controller.abort(), 5000);
 
   try {
-    const response = await fetch(VISITOR_COUNTER_ENDPOINT, {
-      method: 'POST',
-      body: JSON.stringify({
-        url: `${window.location.origin}${window.location.pathname}`,
-        referrer: ''
-      }),
+    const response = await fetch(url, {
+      method: 'GET',
       cache: 'no-store',
       credentials: 'omit',
       referrerPolicy: 'no-referrer',
@@ -54,18 +74,7 @@ async function initializeVisitorCounter() {
     }
 
     const data = await response.json();
-    const visitors = normalizedCounterValue(data.busuanzi_site_uv);
-    const views = normalizedCounterValue(data.busuanzi_site_pv);
-    if (visitors === null || views === null) {
-      throw new Error('Invalid visitor counter response');
-    }
-
-    const numberFormat = new Intl.NumberFormat('en-US');
-    document.getElementById('visitor-count').textContent = numberFormat.format(visitors);
-    document.getElementById('view-count').textContent = numberFormat.format(views);
-    counter.hidden = false;
-  } catch (error) {
-    console.warn('Visitor counter could not be loaded:', error);
+    return normalizedCounterValue(data.value);
   } finally {
     window.clearTimeout(timeout);
   }
