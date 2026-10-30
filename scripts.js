@@ -1,7 +1,7 @@
 const RECENT_PUBLICATION_LIMIT = 8;
 const CURRENT_AUTHOR = 'nuo chen';
-const VISITOR_COUNTER_ENDPOINT = 'https://counterapi.com/api/nuochenpku.github.io/view/homepage';
-const VISITOR_COUNTER_CACHE_KEY = 'homepage-visitor-counts-v1';
+const STATCOUNTER_PROJECT = 13363945;
+const STATCOUNTER_SECURITY = '79502997'; // Public embed identifier, not an account password.
 const LINK_LABELS = {
   pdf: 'PDF',
   paper: 'Paper',
@@ -27,119 +27,73 @@ document.addEventListener('DOMContentLoaded', () => {
   loadPublications();
 });
 
-async function initializeVisitorCounter() {
+function initializeVisitorCounter() {
   const counter = document.getElementById('visitor-counter');
+  const value = document.getElementById('visitor-count');
   const status = document.getElementById('visitor-counter-status');
   const retry = document.getElementById('visitor-counter-retry');
-  if (!counter) return;
+  if (!counter || !value || !status || !retry || counter.dataset.initialized) return;
+  counter.dataset.initialized = 'true';
 
-  counter.hidden = false;
-  const isLocalPreview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
-  if (!['http:', 'https:'].includes(window.location.protocol) || isLocalPreview) {
-    if (status) status.textContent = 'Visitor statistics are available on the live website.';
-    return;
-  }
+  const isLiveSite = window.location.origin === 'https://nuochenpku.github.io';
+  const privacyRequested = navigator.globalPrivacyControl || navigator.doNotTrack === '1';
+  let requestNumber = 0;
+  let hasCount = false;
 
-  const numberFormat = new Intl.NumberFormat('en-US');
-  let cached = null;
-  try {
-    const saved = JSON.parse(localStorage.getItem(VISITOR_COUNTER_CACHE_KEY));
-    if (saved && normalizedCounterValue(saved.views) !== null &&
-        normalizedCounterValue(saved.visitors) !== null && Number.isFinite(saved.updatedAt)) {
-      cached = saved;
-      document.getElementById('view-count').textContent = numberFormat.format(saved.views);
-      document.getElementById('visitor-count').textContent = numberFormat.format(saved.visitors);
-    }
-  } catch {
-    // Counts still work when browser storage is unavailable.
-  }
+  function refreshCount() {
+    const currentRequest = ++requestNumber;
+    const image = new Image();
+    image.alt = 'Visitor total from Statcounter';
+    image.referrerPolicy = 'no-referrer';
+    retry.disabled = true;
+    status.textContent = hasCount ? 'Updating visitor total…' : 'Loading visitor statistics…';
 
-  let loading = false;
-  async function refreshCounts(recordVisit = false) {
-    if (loading) return;
-    loading = true;
-    if (retry) retry.disabled = true;
-    if (status) status.textContent = cached ? 'Showing saved counts · Updating…' : 'Loading visitor statistics…';
-
-    let views = null;
-    let visitors = null;
-    try {
-      try {
-        views = await fetchCounterValue(recordVisit ? VISITOR_COUNTER_ENDPOINT : `${VISITOR_COUNTER_ENDPOINT}?readOnly=true`);
-      } catch (error) {
-        if (!recordVisit) throw error;
-        // A timed-out request may already have counted the visit. Only retry reads.
-        views = await fetchCounterValue(`${VISITOR_COUNTER_ENDPOINT}?readOnly=true`);
+    function finish(error) {
+      window.clearTimeout(timeout);
+      image.onload = null;
+      image.onerror = null;
+      if (currentRequest !== requestNumber) return;
+      if (error) {
+        status.textContent = hasCount ? 'Last loaded total · Live update unavailable.' : error;
+        retry.hidden = false;
+      } else {
+        value.replaceChildren(image);
+        hasCount = true;
+        status.textContent = 'Since Oct 30, 2026';
+        retry.hidden = true;
       }
-      document.getElementById('view-count').textContent = numberFormat.format(views);
-    } catch (error) {
-      console.warn('Page view count could not be loaded:', error);
-    }
-
-    try {
-      visitors = await fetchCounterValue(`${VISITOR_COUNTER_ENDPOINT}?readOnly=true&unique=true`);
-      document.getElementById('visitor-count').textContent = numberFormat.format(visitors);
-    } catch (error) {
-      console.warn('Unique visitor count could not be loaded:', error);
-    }
-
-    const complete = views !== null && visitors !== null;
-    if (complete) {
-      cached = { views, visitors, updatedAt: Date.now() };
-      try {
-        localStorage.setItem(VISITOR_COUNTER_CACHE_KEY, JSON.stringify(cached));
-      } catch {
-        // Storage restrictions must not prevent live counts from being shown.
-      }
-    }
-    if (status) {
-      status.textContent = complete ? '' : cached
-        ? `Live update unavailable · Saved counts from ${new Date(cached.updatedAt).toLocaleString('en-US')}.`
-        : 'Some statistics are temporarily unavailable.';
-    }
-    if (retry) {
-      retry.hidden = complete;
       retry.disabled = false;
     }
-    loading = false;
+
+    const timeout = window.setTimeout(() => finish('Statistics temporarily unavailable.'), 8000);
+    image.onload = () => finish(image.naturalWidth > 1 && image.naturalHeight > 1
+      ? null : 'Counter display is not enabled yet.');
+    image.onerror = () => finish('Statistics temporarily unavailable.');
+    // Official display-only endpoint: retries and local previews never add visits.
+    const url = new URL('https://c.statcounter.com/counter.php');
+    url.searchParams.set('sc_project', STATCOUNTER_PROJECT);
+    url.searchParams.set('security', STATCOUNTER_SECURITY);
+    url.searchParams.set('displayonly', '1');
+    url.searchParams.set('sc_random', Date.now());
+    image.src = url.href;
   }
 
-  if (retry) retry.addEventListener('click', () => refreshCounts());
-  await refreshCounts(true);
-}
+  retry.addEventListener('click', refreshCount);
+  window.addEventListener('online', refreshCount);
+  refreshCount();
 
-async function fetchCounterValue(url) {
-  const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 10000);
-
-  try {
-    const response = await fetch(url, {
-      method: 'GET',
-      cache: 'no-store',
-      credentials: 'omit',
-      referrerPolicy: 'no-referrer',
-      signal: controller.signal
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const data = await response.json();
-    const value = normalizedCounterValue(data.value);
-    if (value === null) throw new Error('Invalid counter response');
-    return value;
-  } finally {
-    window.clearTimeout(timeout);
+  // Use the owner's official embed once, and only on the production origin.
+  // Keep tracking invisible; the separate read-only image is the visible total.
+  if (isLiveSite && !privacyRequested) {
+    window.sc_project = STATCOUNTER_PROJECT;
+    window.sc_invisible = 1;
+    window.sc_security = STATCOUNTER_SECURITY;
+    const script = document.createElement('script');
+    script.src = 'https://www.statcounter.com/counter/counter.js';
+    script.async = true;
+    script.onload = () => window.setTimeout(refreshCount, 1500);
+    document.head.appendChild(script);
   }
-}
-
-function normalizedCounterValue(value) {
-  if (typeof value !== 'number' && (typeof value !== 'string' || !/^\d+$/.test(value))) {
-    return null;
-  }
-  const count = Number(value);
-  return Number.isSafeInteger(count) && count >= 0 ? count : null;
 }
 
 function initializePublicationViews() {

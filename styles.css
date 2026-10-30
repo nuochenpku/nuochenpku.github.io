@@ -907,15 +907,22 @@ footer {
   display: none;
 }
 
-.visitor-counter strong {
-  margin-left: 0.12rem;
+#visitor-count {
+  display: inline-flex;
+  align-items: center;
+  min-width: 1.2rem;
+  min-height: 1rem;
   color: var(--accent-deep);
   font-size: 0.78rem;
   font-variant-numeric: tabular-nums;
 }
 
-.visitor-divider {
-  color: var(--border-strong);
+#visitor-count img {
+  display: block;
+  max-width: 9rem;
+  max-height: 1.3rem;
+  width: auto;
+  height: auto;
 }
 
 .visitor-counter-feedback {
