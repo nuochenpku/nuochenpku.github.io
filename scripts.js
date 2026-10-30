@@ -40,11 +40,11 @@ function initializeVisitorCounter() {
   let requestNumber = 0;
   let hasCount = false;
 
-  function refreshCount() {
+  function refreshCount(recordVisit = false) {
     const currentRequest = ++requestNumber;
     const image = new Image();
     image.alt = 'Visitor total from Statcounter';
-    image.referrerPolicy = 'no-referrer';
+    image.referrerPolicy = recordVisit ? 'strict-origin-when-cross-origin' : 'no-referrer';
     retry.disabled = true;
     status.textContent = hasCount ? 'Updating visitor total…' : 'Loading visitor statistics…';
 
@@ -53,6 +53,11 @@ function initializeVisitorCounter() {
       image.onload = null;
       image.onerror = null;
       if (currentRequest !== requestNumber) return;
+      if (error && recordVisit) {
+        // A timed-out tracking request might already have counted. Only retry reads.
+        refreshCount();
+        return;
+      }
       if (error) {
         status.textContent = hasCount ? 'Last loaded total · Live update unavailable.' : error;
         retry.hidden = false;
@@ -69,31 +74,23 @@ function initializeVisitorCounter() {
     image.onload = () => finish(image.naturalWidth > 1 && image.naturalHeight > 1
       ? null : 'Counter display is not enabled yet.');
     image.onerror = () => finish('Statistics temporarily unavailable.');
-    // Official display-only endpoint: retries and local previews never add visits.
-    const url = new URL('https://c.statcounter.com/counter.php');
-    url.searchParams.set('sc_project', STATCOUNTER_PROJECT);
-    url.searchParams.set('security', STATCOUNTER_SECURITY);
-    url.searchParams.set('displayonly', '1');
+    // Use the owner's official image-only embed once. No session-replay script.
+    // All subsequent reads use the documented display-only endpoint.
+    const url = new URL(recordVisit
+      ? `https://c.statcounter.com/${STATCOUNTER_PROJECT}/0/${STATCOUNTER_SECURITY}/0/`
+      : 'https://c.statcounter.com/counter.php');
+    if (!recordVisit) {
+      url.searchParams.set('sc_project', STATCOUNTER_PROJECT);
+      url.searchParams.set('security', STATCOUNTER_SECURITY);
+      url.searchParams.set('displayonly', '1');
+    }
     url.searchParams.set('sc_random', Date.now());
     image.src = url.href;
   }
 
-  retry.addEventListener('click', refreshCount);
-  window.addEventListener('online', refreshCount);
-  refreshCount();
-
-  // Use the owner's official embed once, and only on the production origin.
-  // Keep tracking invisible; the separate read-only image is the visible total.
-  if (isLiveSite && !privacyRequested) {
-    window.sc_project = STATCOUNTER_PROJECT;
-    window.sc_invisible = 1;
-    window.sc_security = STATCOUNTER_SECURITY;
-    const script = document.createElement('script');
-    script.src = 'https://www.statcounter.com/counter/counter.js';
-    script.async = true;
-    script.onload = () => window.setTimeout(refreshCount, 1500);
-    document.head.appendChild(script);
-  }
+  retry.addEventListener('click', () => refreshCount());
+  window.addEventListener('online', () => refreshCount());
+  refreshCount(isLiveSite && !privacyRequested);
 }
 
 function initializePublicationViews() {

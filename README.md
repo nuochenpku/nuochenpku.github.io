@@ -21,7 +21,9 @@ with **Unique Visits** in that project's **Customize Counter** settings. Keep
 detailed analytics private; a public dashboard is not needed. The public embed
 security identifier in `scripts.js` is not an account password or API token.
 
-The official tracking script loads once on `https://nuochenpku.github.io` only.
+The official image-only tracking endpoint loads once on
+`https://nuochenpku.github.io` only. It is the image URL from the owner's
+Statcounter embed, used without the third-party JavaScript bundle.
 Local previews, other origins, and browsers requesting Do Not Track or Global
 Privacy Control do not run tracking. The displayed image uses Statcounter's
 documented `displayonly` endpoint, so Retry never records another visit. A slow,
@@ -31,8 +33,10 @@ JavaScript-disabled browsers are not tracked by this integration.
 Statistics start with the new project; old CounterAPI totals are not imported.
 "Visitors" follows Statcounter's configured unique-visit/session definition,
 not an exact lifetime count of people. New visits can take a moment to appear.
-The site's code does not enable session replay; analytics features and data
-collection are controlled in the owner's Statcounter account.
+No session replay or third-party tracking JavaScript is loaded. Image-only
+tracking provides less detail than Statcounter's JavaScript integration, and
+unique-visit accuracy can be affected by browser cookie restrictions. Statcounter
+still receives the visitor's IP address and browser request headers.
 
 Run counter regression tests with `node --test scripts/statcounter.test.cjs`.
 
